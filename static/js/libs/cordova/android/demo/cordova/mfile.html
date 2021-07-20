@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			      showInfo();
+			  }
+
+              function showInfo(){
+                 if(cordova && cordova.file){
+                    for(var key in cordova.file){
+                        $("#info").append(key+":"+cordova.file[key]+"<br/>");
+                    }
+                 }
+              }
+			  function download(){
+			      $MFile.execute({
+			                    method:"download",
+			                    param:{
+			                            remoteFileAddr:'http://192.168.0.29:8080/iPB/mobile/config/dic_database.sqlite',
+			                            target:"/databases/dic_database.sqlite"
+			                          }
+			                    },
+                                function(resp){
+                                    topShow('文件下载成功');
+                                },function(error){
+                                    topShow('文件下载失败');
+                                });
+			  }
+
+			  function topShow(msg){
+                   $DSUI.execute({
+                        method:"showTopPop",
+                        param:{
+                                message:msg,
+                                background:"#95000000",
+                                color:"#ffffff",
+                                time:'3'
+                              }
+                    });
+
+              }
+		</script>
+    </head>
+    <body>
+         <div id="info"></div>
+         <button onclick="download();">下载测试</button>
+    </body>
+</html>

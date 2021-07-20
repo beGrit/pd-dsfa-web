@@ -1,0 +1,34 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    },
+    {
+      "text": "标题名称",
+      "bindControlAttr": "title",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "组件宽度",
+      "bindControlAttr": "width",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "组件高度",
+      "bindControlAttr": "height",
+      "showType": "text",
+      "inCommonUse": true
+    }
+  ]
+}]

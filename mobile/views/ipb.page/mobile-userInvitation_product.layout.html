@@ -1,0 +1,157 @@
+<script type="text/template" id="layout">
+{"isBusiness":false,"designId":"3veb8dr6C4BcIcM8","caption":"page","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[{"name":"center","controls":[{"isBusiness":false,"designId":"AJXTnmQg4QRrlCcc","caption":"section2","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[{"name":"default","controls":[{"isBusiness":false,"designId":"VRABQgTsXhtH7SGr","caption":"html3","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"html":"&lt;h3 class=&quot;invitation-code-title&quot;&gt;邀请您加入{{orgName}}单位，邀请码为：&lt;/h3&gt;","ctrlType":"dsf.mobile.html","ctrlName":"DsfMobileHtml"},{"isBusiness":false,"designId":"mPAVhQKkqkC5hlEu","caption":"html4","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"html":"&lt;ul class=&quot;invitation-code-wrap&quot;&gt;\r\n  &lt;li class=&quot;invitation-code-item&quot;&gt;{{invitationCode[0]}}&lt;/li&gt;\r\n  &lt;li class=&quot;invitation-code-item&quot;&gt;{{invitationCode[1]}}&lt;/li&gt;\r\n  &lt;li class=&quot;invitation-code-item&quot;&gt;{{invitationCode[2]}}&lt;/li&gt;\r\n  &lt;li class=&quot;invitation-code-item&quot;&gt;{{invitationCode[3]}}&lt;/li&gt;\r\n&lt;/ul&gt;","ctrlType":"dsf.mobile.html","ctrlName":"DsfMobileHtml"},{"isBusiness":false,"designId":"CKuXUlAcjKA9Ra0S","caption":"html5","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"html":"&lt;div class=&quot;invitation-code-reset&quot;&gt;\r\n  &lt;span @click=&quot;resetCode&quot;&gt;重新生成&lt;/span&gt;\r\n&lt;/div&gt;","ctrlType":"dsf.mobile.html","ctrlName":"DsfMobileHtml"}]}],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"height":"230","margin":["0","0","0","0"],"padding":[0,0,0,0],"bgColor":"#fff","shadow":false,"borderRadius":"0","zIndex":0,"ctrlType":"dsf.mobile.section","ctrlName":"DsfMobileSection"}]},{"name":"head","controls":[{"isBusiness":false,"designId":"flAaGfoXObYNCHlz","caption":"navbar1","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"label":"返回","navTitle":"用户邀请","showBack":true,"ctrlType":"dsf.mobile.navbar","ctrlName":"DsfMobileNavBar"}]},{"name":"foot","controls":[{"isBusiness":false,"designId":"x5b0hrxtVOzfqZSv","caption":"section6","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[{"name":"default","controls":[{"isBusiness":false,"designId":"A1ntsiN8k8dN4kxD","caption":"html7","visible":true,"metadata":null,"classList":[],"noPadding":false,"slots":[],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"html":"&lt;div class=&quot;invitation-code-btn-box&quot;&gt;\r\n  &lt;img class=&quot;invitation-code-btn-icon&quot; src=&quot;/static/dangjianbao/img/mobile/create-qrcode.png&quot;&gt;\r\n  &lt;div class=&quot;invitation-code-btn-txt&quot;&gt;\r\n    &lt;p class=&quot;invitation-code-btn-title&quot;&gt;生成组织二维码&lt;/p&gt;\r\n    &lt;p class=&quot;invitation-code-btn-desc&quot;&gt;微信扫一扫加入组织&lt;/p&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;","ctrlType":"dsf.mobile.html","ctrlName":"DsfMobileHtml"}]}],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{"@click.native":"createQrCode"},"slots":""},"designProxy":true,"designOnlySlot":false,"height":"80","margin":[20,20,20,20],"padding":[0,0,0,0],"bgColor":"#FF8F00","shadow":true,"borderRadius":"6px","zIndex":0,"ctrlType":"dsf.mobile.section","ctrlName":"DsfMobileSection"}]}],"isMergeHttp":false,"tbNoPadding":false,"lrNoPadding":false,"development":{"attrs":{}},"designProxy":true,"designOnlySlot":false,"isLoaded":false,"name":"mobile-userInvitation","serial":7,"isView":true,"context":{"B":"ipb","M":"page"},"clientVersion":"2.0","title":"用户邀请","headfootwidth":"same","fit":"1","topBottom":"","leftRight":"","viewSplit":"0px,0px","pageWidth":"","hasHeader":true,"hasFooter":true,"pagePrivilege":[],"pageType":"other","xssConfig":{"allow":false},"customCss":"","footFixed":true,"needLogin":true,"footerBackground":"transparent","formItemLabelWidth":120,"pageLevel":1,"isKeepAlive":false,"topSafeArea":true,"bottomSafeArea":true,"contentPadding":["0px","0px","0px","0px"],"styles":"","ctrlType":"dsf.mobile.page","ctrlName":"DsfMobilePage"}
+</script>
+<script type="text/template" id="css">
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-title {
+  width: 100%;
+  font-family: PingFangSC-Medium;
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-wrap .invitation-code-item {
+  width: 60px;
+  height: 70px;
+  line-height: 70px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  font-family: PingFangSC-Medium;
+  font-size: 30px;
+  color: #333333;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-wrap .invitation-code-item:last-child {
+  margin-right: 0;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-reset {
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #FF8F00;
+  text-align: center;
+  margin-top: 32px;
+  text-decoration: underline;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-btn-box {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 13px 20px;
+  height: 100%;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-btn-box .invitation-code-btn-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-btn-box .invitation-code-btn-txt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-btn-box .invitation-code-btn-txt .invitation-code-btn-title {
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.ds-page[module-name="ipb.page.mobile-userInvitation"] .invitation-code-btn-box .invitation-code-btn-txt .invitation-code-btn-desc {
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+</script>
+<script type="text/template" id="scss">
+.invitation-code-title {
+  width: 100%;
+  font-family: PingFangSC-Medium;
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  margin-top: 30px;
+}
+.invitation-code-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 35px;
+  .invitation-code-item {
+    width: 60px;
+    height: 70px;
+    line-height: 70px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    font-family: PingFangSC-Medium;
+    font-size: 30px;
+    color: #333333;
+    text-align: center;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.invitation-code-reset {
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #FF8F00;
+  text-align: center;
+  margin-top: 32px;
+  text-decoration: underline;
+}
+
+.invitation-code-btn-box {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 13px 20px;
+  height: 100%;
+  .invitation-code-btn-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .invitation-code-btn-txt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .invitation-code-btn-title {
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+    .invitation-code-btn-desc {
+      font-family: PingFangSC-Regular;
+      font-size: 13px;
+      color: #FFFFFF;
+    }
+  }
+}
+</script>
+<script type="text/template" id="designer">
+{"metadataGroup":[{"name":"ipb_page_invite元数据","id":"ipb.page.invite","type":"3"}],"controlGroup":[{"name":"布局","id":"a8b90787b9924e038c486ab751a5166d","type":2},{"name":"表单","id":"f27950c86d3c489086d43999aa321c50","type":2},{"name":"文字","id":"6974a69a63ce43c7b0f4a32ec01ecf81","type":2},{"name":"导航","id":"56ee37ca0e9146b7906e87e270fef3d9","type":2},{"name":"系统","id":"461c22848cd2483e8cab409e0281ca31","type":2},{"name":"按钮","id":"8732107eb124474295c474427b529a75","type":2},{"name":"数据","id":"1345505f156c4ee78a4e63a5c93e73bc","type":2}],"businessControlGroup":[],"fromTemplateId":"dsfa.template.mobile-null"}
+</script>
+<script type="text/template" id="metadatedict">
+
+</script>

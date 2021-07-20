@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+			  function choice(){
+			     $Photo.choice(function(res){
+                      alert(JSON.stringify(res));
+			     },function(){
+                      alert("失败!");
+			     });
+			  }
+
+			  function choicePictures(){
+			     $ImagePicker.choicePictures({"limitCount":9},function(res){
+                      alert(JSON.stringify(res));
+			     },function(){
+                      alert("失败!");
+			     });
+			  }
+
+			  function choiceVideos(){
+			     $ImagePicker.choiceVideos({"limitCount":1},function(res){
+                      alert(JSON.stringify(res));
+			     },function(){
+                      alert("失败!");
+			     });
+			  }
+			  function choiceVideosAndUpload(){
+			     $ImagePicker.choiceVideosAndUpload({"limitCount":1},function(res){
+                      alert(JSON.stringify(res));
+			     },function(){
+                      alert("失败!");
+			     });
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="choice();">选择相册</button><br><br>
+         <button onclick="choicePictures();">choicePictures</button><br><br>
+         <button onclick="choiceVideos();">choiceVideos</button><br><br>
+         <button onclick="choiceVideosAndUpload();">choiceVideosAndUpload</button>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			  		alert('ready!');
+   			  }
+   			  
+   			  function download(){
+   			  		var fileTransfer = new FileTransfer();
+   			  		var url = "http://192.168.2.188:8020/cordova/demo/cordova/sqlite.html";
+   			  		var filePath = 'file:///storage/sdcard0/wenj/sqlite.html';
+   			  		fileTransfer.download(
+			                url,
+			                filePath,
+			                onSucceed,
+			                onError,
+			                false,{}
+			            );
+			        fileTransfer.onprogress = function (progressEvent) {
+		                if (progressEvent.lengthComputable) {
+		                    console.log("load:["+progressEvent.loaded+"]  total:["+progressEvent.total+"]");
+	                    }
+	                };
+   			  }
+   			  
+   			  function onSucceed(result){
+   			      alert('success');
+   			  }
+
+			  function onError(){
+			  	  alert("onError");
+			  }
+
+			  function testDir(){
+			      alert(resolveLocalFileSystemURL);
+			      resolveLocalFileSystemURL("file:///data/data/com.hb.normal.jzy/files/www/database/dic",function(entry) {
+                        alert('cdvfile URI: ' + entry.toInternalURL());
+			      },function(error){
+			         alert("错误:"+error);
+			      });
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="download();">下载</button>
+         <button onclick="testDir()">测试</button>
+    </body>
+</html>

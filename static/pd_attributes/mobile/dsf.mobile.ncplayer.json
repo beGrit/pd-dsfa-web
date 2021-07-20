@@ -1,0 +1,45 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },{
+        "text": "自动播放",
+        "bindControlAttr": "autoPlay",
+        "showType": "boolean"
+      },{
+        "text": "是否直播",
+        "bindControlAttr": "isLive",
+        "showType": "boolean"
+      },{
+        "text": "是否获取网络状态",
+        "bindControlAttr": "netWork",
+        "showType": "boolean"
+      },{
+        "text": "跳到指点时间",
+        "bindControlAttr": "seekTime",
+        "showType": "text"
+      },{
+        "text": "封面图片",
+        "bindControlAttr": "coverImg",
+        "showType": "text"
+      },{
+        "text": "视频地址",
+        "bindControlAttr": "videoSource",
+        "showType": "text"
+      },{
+        "text": "允许拖动进度条",
+        "bindControlAttr": "allowFastForward",
+        "showType": "boolean"
+      },{
+        "text": "是否显示全屏",
+        "bindControlAttr": "isFull",
+        "showType": "boolean"
+      }
+    ]
+  }
+]

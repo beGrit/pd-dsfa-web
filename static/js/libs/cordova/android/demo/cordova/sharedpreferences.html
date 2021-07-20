@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      <!--alert("ready");-->
+			  }
+
+			  function save(){
+                $sharedPreferences.save({"accountId":"c5bd4141613547f08f82eb2c299a1bc6","password":"123456"},function(){
+			            alert("存储成功");
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+			  function getUserName(){
+                $sharedPreferences.get("accountId",function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  function removeUserName(){
+                $sharedPreferences.remove("accountId",function(){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  function clear1(){
+			      $sharedPreferences.clear(function(){
+			         alert("清理完成");
+			      });
+			  }
+
+
+    </script>
+</head>
+<body>
+<button onclick="save();">存储用户名和密码</button>
+<button onclick="getUserName();">获取用户名</button>
+<button onclick="clear1();">清空存储</button>
+
+</body>
+</html>

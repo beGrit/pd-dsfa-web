@@ -1,0 +1,88 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      <!--alert("ready");-->
+			  }
+
+              var recordId;
+			  function recordStartHasDialog(){//结束录音时返回录音对象
+                _DsfRecord.recordStartHasDialog({},function(result){
+                        recordId = result['id'];
+			            alert(JSON.stringify(result));
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+			  function recordStart(){//开始录音
+                _DsfRecord.recordStart();
+			  }
+			  function recordStop(){//结束录音
+                _DsfRecord.recordStop({},function(result){
+                        recordId = result['id'];
+			            alert(JSON.stringify(result));
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  function recordPlay(){//播放录音
+                _DsfRecord.recordPlay({"recordId":recordId});
+			  }
+
+			  function recordPlayStop(){//暂停播放
+                _DsfRecord.recordPlayStop();
+			  }
+
+			  function recordUpload(){//开始上传
+                _DsfRecord.recordUpload({"recordId":recordId},function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  function videoRecordStart(){//开始录屏
+                _DsfRecord.videoRecordStart({"width":300,"height":200,"leftMargin":10,"topMargin":0,"rightMargin":10,"bottomMargin":10,"type":2},function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+			  function videoRecordStop(){//停止录屏
+                _DsfRecord.videoRecordStop({"width":150},function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  function takePhoto(){//倒计时拍照
+                _DsfRecord.takePhoto({"time":3,"COUNT_DOWN":true,"SHOW_BUTTON":false},function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+    </script>
+</head>
+<body>
+<button onclick="recordStartHasDialog();">开始录音有弹框</button><br><br>
+<button onclick="recordStart();">开始录音</button><br><br>
+<button onclick="recordStop();">结束录音</button><br><br>
+<button onclick="recordPlay();">开始播放</button><br><br>
+<button onclick="recordPlayStop();">结束播放</button><br><br>
+<button onclick="recordUpload();">开始上传</button>
+<button onclick="videoRecordStart();">开始录视频</button>
+<button onclick="videoRecordStop();">停止录视频</button>
+<button onclick="takePhoto();">倒计时拍照</button>
+</body>
+</html>

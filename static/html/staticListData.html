@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css"
+    href="../js/libs/SpreadJS/css/gc.spread.sheets.excel2013lightGray.13.1.4.css" />
+  <!-- <script src="../js/libs/SpreadJS/scripts/gc.spread.sheets.all.13.1.4.min.js"></script> -->
+  <script src="../js/libs/SpreadJS/scripts/gc.spread.sheets.all.min.js"></script>
+  <script src="../js/libs/SpreadJS/scripts/resources/zh/gc.spread.sheets.resources.zh.13.1.4.min.js"></script>
+  <style>
+    #excel-box {
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      overflow: hidden;
+    }
+
+    #excel {
+      height: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <div id="excel-box">
+    <div id="excel"></div>
+  </div>
+  <script>
+    var spread = null;
+    var data = null;
+    window.onload = function () {
+      GC.Spread.Common.CultureManager.culture("zh-cn");
+      spread = new GC.Spread.Sheets.Workbook(document.querySelector("#excel"), { sheetCount: 1 });
+      initSpread(spread)
+    }
+    function initSpread(spread) {
+      spread.options.scrollbarMaxAlign = true;
+      spread.options.scrollbarShowMax = true;
+      // var sd = dataSource;
+      spread.options.tabEditable = false;
+      spread.options.newTabVisible = false;
+      var sheet = spread.getActiveSheet();
+      // if (sd.length > 0) {
+      // sheet.setDataSource(sd);
+      // }
+      spread.suspendPaint();
+      // 挂起公式计算
+      spread.suspendCalcService(false);
+      sheet.setColumnCount(26);
+      for (let i = 0; i < 26; i++) {
+        sheet.setColumnWidth(i, 150);
+      }
+      initSheet(sheet);
+      // setData(sheet);
+      setDataSource(sheet)
+      spread.resumePaint();
+      spread.resumeCalcService(true);
+    }
+
+    function setData(sheet) {
+      let frame = window.frameElement;
+      if (frame) {
+        let value = frame.getValue();
+        if (value) {
+          for (let i = 0; i < value.length; i++) {
+            for (let c = 0; c < value[i].length; c++) {
+              sheet.setValue(i, c, value[i][c])
+            }
+          }
+        }
+      }
+    }
+
+    function setDataSource(sheet) {
+      let frame = window.frameElement;
+      if (frame) {
+        data = frame.getValue();
+        if (data) {
+          sheet.autoGenerateColumns = true
+          sheet.setDataSource(data.data);
+          if (data.fields) {
+            for (let i = 0; i < data.fields.length; i++) {
+              sheet.bindColumn(i, { name: data.fields[i].name, displayName: data.fields[i].displayName, size: 250 });
+            }
+          }
+          if (data.data.length < 200) {
+            let rowCount = sheet.getRowCount();
+            let offset = 200 - rowCount;
+            sheet.addRows(rowCount, offset)
+          }
+
+        }
+      }
+    }
+    function initSheet(sheet) {
+      //滚动增加行
+      sheet.bind(GC.Spread.Sheets.Events.TopRowChanged, function (sender, args) {
+        var rowCount = sheet.getRowCount();
+        var bottomRow = sheet.getViewportBottomRow(1);
+        if (bottomRow == rowCount - 1) {
+          if (rowCount < 10000) {
+            sheet.setRowCount(rowCount + 10);
+          }
+        }
+      });
+      // //滚动增加列
+      // sheet.bind(GC.Spread.Sheets.Events.LeftColumnChanged, function (serder, args) {
+      //   var columnCount = sheet.getColumnCount();
+      //   var rightColumn = sheet.getViewportRightColumn(1);
+      //   if (rightColumn == columnCount - 1) {
+      //     if (columnCount < 100) {
+      //       let num = columnCount + 10
+      //       sheet.setColumnCount(num);
+      //       for (let i = columnCount; i < num; i++) {
+      //         sheet.setColumnWidth(i, 150);
+      //       }
+      //     }
+      //   }
+      // })
+    }
+    //获取表格数据
+    function getData(sheet) {
+      let maxRow = sheet.getRowCount();
+      let maxColumn = sheet.getColumnCount();
+      let data = [];
+      for (let i = 0; i < maxRow; i++) {
+        let row = [];
+        for (let c = 0; c < maxColumn; c++) {
+          row[c] = sheet.getValue(i, c) || ""
+        }
+        data.push(row)
+      }
+      return data;
+    }
+    //获取表格有效区域的数据
+    function getinValidData(sheet) {
+      let data = getData(sheet);
+      let maxColumn = sheet.getColumnCount();
+      for (let i = data.length - 1; i >= 0; i--) {
+        let row = data[i];
+        let str = row.join("");
+        if (!str) {
+          data.splice(i, 1)
+        }
+        else {
+          break;
+        }
+      }
+      let useMaxColumn = maxColumn - 1;
+      let isLoopEnd = false;
+      for (let c = maxColumn - 1; c >= 0; c--) {
+        let arr = [], src = ""
+        for (let i = 0; i < data.length; i++) {
+          arr.push(data[i][c])
+        }
+        if (arr.join("").trim() != "") {
+          useMaxColumn = c;
+          isLoopEnd = true;
+        }
+        if (isLoopEnd) {
+          break;
+        }
+      }
+      for (let i = 0; i < data.length; i++) {
+        data[i] = data[i].slice(0, useMaxColumn + 1);
+      }
+      return data;
+    }
+
+    function getDataSource(sheet) {
+      let c = Object.assign([], sheet.getDataSource());
+      let fields = data.fields;
+      let d = [];
+      for (let i = c.length - 1; i >= 0; i--) {
+        let str = "", arr = [];
+        for (let k in c[i]) {
+          let v = c[i][k]
+          arr.push((v !== undefined && v !== null) ? c[i][k] : "");
+        }
+        str = arr.join("")
+        if (!str) {
+          c.splice(i, 1);
+        }
+      }
+      return c;
+    }
+    function yes() {
+      let sheet = spread.getActiveSheet();
+      sheet.endEdit();
+      let data = getDataSource(sheet)
+      return data;
+    }
+  </script>
+</body>
+
+</html>

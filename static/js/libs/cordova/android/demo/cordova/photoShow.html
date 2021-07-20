@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+			  function choice(){
+			     $Photo.choice(function(res){
+                      <!--alert(JSON.stringify(res));-->
+                      var imageData = res[0]["base64File"];
+                      var image = document.getElementById('img1');
+			          image.src = "data:image/jpeg;base64," + imageData;
+			     },function(){
+                      alert("失败!");
+			     });
+			  }
+
+    </script>
+</head>
+<body>
+<button onclick="choice();">选择相册</button>
+<br><br>
+<img src="" id="img1"  height="200" width="300"><br>
+<img src="file:///data/user/0/com.dreamit.offlineTest/cache/takephoto_cache/magazine-unlock-01-2.3.1742-666B138D56EAC5FE67C698A54E100D19.jpg"><br>
+<img src="file:///storage/emulated/0/Huawei/MagazineUnlock/magazine-unlock-03-2.3.1722-9A4A4E8F7CB2A9429B0581237D35F5BD.jpg"><br>
+</body>
+</html>

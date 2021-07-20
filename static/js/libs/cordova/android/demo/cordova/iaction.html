@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      <!--alert("ready");-->
+			  }
+
+              //下载图片到相册（参数：url）
+			  function downloadImg(){
+                $iaction.downloadPhoto({"url":"http://media.81.mil.cn/picture/home_jzyd_bg.png"},function(){
+			            alert("存储成功");
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+			  //下载文件到本地（参数：url，title）
+			  function downloadFile(){
+                $iaction.downloadFile({"url":"http://media.81.mil.cn/picture/home_jzyd_bg.png","title":"home_jzyd_bg.png"},function(s){
+			            alert(s);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+			  //打电话(callType:0直接拨打，1跳转拨号盘)
+			  function callPhone(){
+                $iaction.callPhone({"phoneNumber":"15026703275","callType":"1"},function(s){
+
+			      },function(e){
+
+			      });
+			  }
+
+			  //打开第三方APP
+			  function openApp(){
+                $iaction.openApp({"appUrl":"cn.xuexi.android","appDownUrl":"https://h5.xuexi.cn/page/download.html"},function(s){
+
+			      },function(e){
+
+			      });
+			  }
+
+			  //打开华为白板
+			  function openHuaweiWhiteboard(){
+                $iaction.openHuaweiWhiteboard({"packageName":"com.dsfa.hwstudy.compound","activityName":"com.dsfa.hwstudy.compound.MainActivity"},function(s){
+
+			      },function(e){
+
+			      });
+			  }
+
+
+    </script>
+</head>
+<body>
+<button onclick="downloadImg();">下载图片到相册</button>
+<button onclick="downloadFile();">下载文件</button>
+<button onclick="callPhone();">拨打电话</button>
+<button onclick="openApp();">学习强国</button>
+<button onclick="openHuaweiWhiteboard();">打开华为白板</button>
+
+</body>
+</html>

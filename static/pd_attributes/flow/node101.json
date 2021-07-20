@@ -1,0 +1,665 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ID",
+    "desc": "节点的唯一标识"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "节点基本信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Name",
+    "desc": "节点的名称",
+    "isBase": true,
+    "required": true
+  },
+  {
+    "name": "任务类型",
+    "value": "用户任务",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Type",
+    "desc": "任务类型"
+  },
+  {
+    "name": "节点期限类型",
+    "value": 0,
+    "group": "节点基本信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "无限制"
+          },
+          {
+            "value": 1,
+            "text": "自然日"
+          },
+          {
+            "value": 2,
+            "text": "工作日"
+          },
+          {
+            "value": 13,
+            "text": "(自然日)时"
+          },
+          {
+            "value": 14,
+            "text": "(自然日)分"
+          },
+          {
+            "value": 23,
+            "text": "(工作日)时"
+          },
+          {
+            "value": 24,
+            "text": "(工作日)分"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "TimeLimit",
+    "nodeName3": "Type",
+    "desc1": "节点的办理期限",
+    "desc": "期限类型:0：无限制，1:自然日，2:工作日，13:(自然日)时，14:(自然日)分，23:(工作日)时，24:(工作日)分",
+    "isBase": true,
+    "showRob": "Value"
+  },
+  {
+    "name": "办理期限值",
+    "value": "",
+    "group": "节点基本信息",
+    "editor": "numberbox",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "TimeLimit",
+    "nodeName3": "Value",
+    "desc": "节点的办理期限:限制值",
+    "isBase": true
+  },
+  {
+    "name": "显示顺序",
+    "value": 1,
+    "group": "节点基本信息",
+    "editor": "numberbox",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ShowOrder",
+    "desc": "节点显示顺序"
+  },
+  {
+    "name": "记住上次人员",
+    "value": 0,
+    "group": "节点基本信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "IsRememberUser",
+    "desc": "记住上次人员：0，否；1，是;主要用于流程表单控件，发送后，将选择的人员信息保存到g_pnodes表 "
+  },
+  {
+    "name": "更换背景图(体系化模式生效)",
+    "value": "",
+    "group": "节点基本信息",
+    "nodeLevel": 1,
+    "nodeName": "CustomNodeImg",
+    "desc": "选择节点显示的图标",
+    "type": "dialog",
+    "config": {
+      "content": "SelectImg",
+      "width": "300px",
+      "height": "266px"
+    }
+  },
+  {
+    "name": "制度要求",
+    "value": {},
+    "group": "质量体系标准",
+    "nodeLevel": 1,
+    "nodeName": "InstitutionAndRiskInfoList",
+    "desc": "制度要求",
+    "type": "dialog",
+    "config": {
+      "content": "InstitutionInfo",
+      "width": "600px",
+      "height": "366px"
+    }
+  },
+  {
+    "name": "处理模式",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "单人办理"
+          },
+          {
+            "value": 1,
+            "text": "会签（多人同时处理）"
+          },
+          {
+            "value": 2,
+            "text": "多人依次处理"
+          },
+          {
+            "value": 3,
+            "text": "抄送（需提交）"
+          },
+          {
+            "value": 4,
+            "text": "抄送（不需提交）"
+          },
+          {
+            "value": 5,
+            "text": "抢办（按人数）"
+          },
+          {
+            "value": 6,
+            "text": "抢办（按比例）"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "Type",
+    "desc1": "入线信息",
+    "desc": "处理模式:0：单人办理，1:会签（多人同时处理），2:多人依次处理，3:抄送（需提交），4:抄送（不需提交），5:抢办（按人数），6:抢办（按比例）",
+    "isBase": true,
+    "showRob": "RushInfo"
+  },
+  {
+    "name": "人数",
+    "value": "1",
+    "group": "入线信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "RushInfo",
+    "desc": "抢办人数",
+    "isBase": true,
+    "hide": true,
+    "unit": "（人）",
+    "max": 999999
+  },
+  {
+    "name": "处理范围",
+    "value": "",
+    "group": "入线信息",
+    "class": "RangeRule",
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "RangeRule",
+    "desc": "处理范围",
+    "type": "dialog",
+    "config": {
+      "content": "RangeRule",
+      "width": "1100px",
+      "height": "552px"
+    },
+    "isBase": true
+  },
+  {
+    "name": "是否允许选择范围外人员",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "IsSelectOtherUser",
+    "desc": "是否允许选择范围外人员：0，否；1，是; 选择是，在发送页面可以会出现'选择更多人员'按钮，点击后，可选人员变为全部人员"
+  },
+  {
+    "name": "范围外人员可选范围",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": -9,
+            "text": "全部"
+          },
+          {
+            "value": -1,
+            "text": "本部门"
+          },
+          {
+            "value": 0,
+            "text": "本机构"
+          },
+          {
+            "value": 1,
+            "text": "本一级部门"
+          },
+          {
+            "value": 2,
+            "text": "本二级部门"
+          },
+          {
+            "value": 3,
+            "text": "本三级部门"
+          },
+          {
+            "value": 4,
+            "text": "本四级部门"
+          },
+          {
+            "value": 5,
+            "text": "本五级部门"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "RangeOtherUser",
+    "desc": "范围外人员可选范围：-9，全部；-1，本部门; 0，本机构；1，本一级部门；2，本二级部门；3，本三级部门；4，本四级部门；5，本五级部门；"
+  },
+  {
+    "name": "展开层级",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": -1,
+            "text": "全部展开"
+          },
+          {
+            "value": 0,
+            "text": "不展开"
+          },
+          {
+            "value": 1,
+            "text": "一级"
+          },
+          {
+            "value": 2,
+            "text": "两级"
+          },
+          {
+            "value": 3,
+            "text": "三级"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "ExpandLevel",
+    "desc1": "入线信息",
+    "desc": "展开层级:-1： 全部展开， 0：不展开，1:一级，2:两级，3:三级"
+  },
+  {
+    "name": "继承节点经办人",
+    "value": 1,
+    "group": "入线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "不继承"
+          },
+          {
+            "value": 1,
+            "text": "继承"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "IsInherit",
+    "desc1": "入线信息",
+    "desc": "继承节点经办人: 0：不继承，1：继承"
+  },
+  {
+    "name": "与前节点同人可自动办理",
+    "value": "0",
+    "group": "入线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "IsOneselfProcessing",
+    "desc": "与上一节点同一人可自动办理：0，否，1，是"
+  },
+  {
+    "name": "超时自动办理天数",
+    "value": 0,
+    "group": "入线信息",
+    "editor": "numberbox",
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "TimeOutAutoProcessingDay",
+    "desc": "超时自动办理天数，如果大于0则设置了超时自动办理的功能，否则为0则不启用超时自动办理"
+  },
+  {
+    "name": "是否自动返回",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": -1,
+            "text": "不设置"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          },
+          {
+            "value": 0,
+            "text": "否"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "IsBackTrack",
+    "desc": "是否自动返回：0，否；1，是; 当值为是时，默认发给当前节点的发送人，否则根据发送范围选择。 注意：如果前面的线配置了【是否自动返回】，则根据线上条件走，节点该属性忽略"
+  },
+  {
+    "name": "出线信息类型",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "或分支"
+          },
+          {
+            "value": 1,
+            "text": "与分支"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "Type",
+    "desc1": "出线信息",
+    "desc": "出线信息类型：0，或分支，1，与分支"
+  },
+  {
+    "name": "是否必填意见",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "IsEnableBatch",
+    "desc": "是否必填意见,  0：否，1：是"
+  },
+  {
+    "name": "退回控制",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "退回到上一节点"
+          },
+          {
+            "value": 1,
+            "text": "按路径退回"
+          },
+          {
+            "value": 2,
+            "text": "按环节退回"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "SendBackType",
+    "desc": "退回控制，0：退回到上一节点，1：按路径退回, 2: 按环节退回"
+  },
+  {
+    "name": "是否允许批量处理",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "AllowBat",
+    "desc": "是否允许批量处理：0，否，1，是；设置为是，可以批量处理当前节点"
+  },
+  {
+    "name": "发送后",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onAfterSend",
+    "desc1": "事件",
+    "desc": "发送后",
+    "type": "dialog",
+    "config": {
+      "title": "发送后",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "退回",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onSendBack",
+    "desc1": "事件",
+    "desc": "办结流程",
+    "type": "dialog",
+    "config": {
+      "title": "办结流程",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "强制办结",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onForceClose",
+    "desc1": "事件",
+    "desc": "强制办结",
+    "type": "dialog",
+    "config": {
+      "title": "强制办结",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "回收",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onRecovery",
+    "desc1": "事件",
+    "desc": "回收",
+    "type": "dialog",
+    "config": {
+      "title": "回收",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "强制回收",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onForceRecovery",
+    "desc1": "事件",
+    "desc": "强制回收",
+    "type": "dialog",
+    "config": {
+      "title": "强制回收",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting"
+    }
+  },
+  {
+    "name": "增发",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onExSend",
+    "desc1": "事件",
+    "desc": "增发",
+    "type": "dialog",
+    "config": {
+      "title": "增发",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting"
+    }
+  },
+  {
+    "name": "汇总开始节点",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherStartNode",
+    "desc": "选择汇总的开始节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总信息",
+      "width": "300px",
+      "height": "266px",
+      "content": "SumStartNode"
+    }
+  },
+  {
+    "name": "汇总范围",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherRule",
+    "desc": "选择汇总范围内的所有节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总范围",
+      "width": "360px",
+      "height": "356px",
+      "content": "SumAllNode"
+    }
+  }
+]

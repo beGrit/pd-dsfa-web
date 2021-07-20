@@ -1,0 +1,237 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "一行几列",
+        "bindControlAttr": "colNum",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 1,
+          "precision": 0
+        }
+      },
+      {
+        "text": "一页几行",
+        "bindControlAttr": "rowNum",
+        "showType": "number",
+        "desc": "<p>0表示不限行数，且页数将固定1</p>",
+        "inCommonUse": true,
+        "config": {
+          "min": 0,
+          "precision": 0
+        }
+      },
+      {
+        "text": "最多几页",
+        "bindControlAttr": "maxPages",
+        "showType": "number",
+        "desc": "<p>0表示无限制</p>",
+        "inCommonUse": true,
+        "config": {
+          "min": 0,
+          "precision": 0
+        }
+      },
+      {
+        "text": "组件高度",
+        "bindControlAttr": "heightType",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "自动",
+            "value": "auto"
+          },
+          {
+            "text": "固定",
+            "value": "fixed"
+          }
+        ]
+      },
+      {
+        "text": "是否显示更多按钮",
+        "bindControlAttr": "hasMore",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "是否强制使用默认样式",
+        "bindControlAttr": "useDefaultStyle",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "数据来源",
+        "bindControlAttr": "dataSource",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "请求",
+            "value": "http"
+          },
+          {
+            "text": "配置",
+            "value": "json"
+          }
+        ]
+      },
+      {
+        "text": "数据请求地址",
+        "bindControlAttr": "dataSourceUrl",
+        "showType": "text",
+        "showExpress": "@[dataSource] == 'http'",
+        "inCommonUse": true
+      },
+      {
+        "text": "数据配置",
+        "bindControlAttr": "dataSourceList",
+        "showType": "dialog",
+        "showExpress": "@[dataSource] == 'json'",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesMobileNavMenuData",
+          "width": "1200px",
+          "height": "60vh"
+        }
+      }
+    ]
+  },
+  {
+    "name": "更多按钮",
+    "attributes": [
+      {
+        "text": "更多按钮显示文字",
+        "bindControlAttr": "moreText",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "更多按钮显示图标",
+        "bindControlAttr": "moreIcon",
+        "showType": "text",
+        "desc": "<p><button onclick=\"window.open(dsf.url.getWebPath('$/pc/iconfont/demo_index.html'), 'icondemo')\">查看图标</button></p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "更多按钮跳转链接",
+        "bindControlAttr": "moreUrl",
+        "showType": "text",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "按钮默认样式",
+    "attributes": [
+      {
+        "text": "展示优先级",
+        "bindControlAttr": "showPriority",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "图片优先",
+            "value": "img"
+          },
+          {
+            "text": "icon优先",
+            "value": "icon"
+          }
+        ]
+      },
+      {
+        "text": "是否有背景",
+        "bindControlAttr": "menuHasBg",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景色",
+        "bindControlAttr": "menuBgColor",
+        "showType": "text",
+        "showExpress": "@[menuHasBg]",
+        "desc": "<p><b>theme-linear</b>: 主题色渐变<br/><b>theme</b>: 主题色</p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景阴影",
+        "bindControlAttr": "menuBgShadow",
+        "showType": "boolean",
+        "showExpress": "@[menuHasBg]",
+        "inCommonUse": true
+      },
+      {
+        "text": "前景色",
+        "bindControlAttr": "menuColor",
+        "showType": "text",
+        "desc": "<p><b>theme-linear</b>: 主题色渐变<br/><b>theme</b>: 主题色</p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "前景阴影",
+        "bindControlAttr": "menuShadow",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "边框尺寸（小数）",
+        "bindControlAttr": "menuBorderSize",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0.4,
+          "step": 0.01,
+          "precision": 3
+        }
+      },
+      {
+        "text": "图标尺寸（小数）",
+        "bindControlAttr": "menuIconSize",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0.3,
+          "step": 0.01,
+          "precision": 3
+        }
+      },
+      {
+        "text": "圆角（小数）",
+        "bindControlAttr": "menuBorderRadius",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0,
+          "step": 0.01,
+          "precision": 3
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "desc": "<p>属性 <b>item-click</b> : 传入方法，点击菜单按钮时会调用该方法，返回false将不执行跳转</p>",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1200px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,337 @@
+// 获取主题色
+@function theme-color($k: "normal") {
+  @each $themename, $theme in $themes {
+    @return map-get($map: $theme, $key: $k);
+  }
+}
+
+@mixin font-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin font-theme-opacity($k, $a: 0.3, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        color: rgba(map-get($map: $theme, $key: $k), $alpha: $a) !important;
+      } @else {
+        color: rgba(map-get($map: $theme, $key: $k), $alpha: $a);
+      }
+    }
+  }
+}
+
+@mixin border-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-color-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-color-theme-opacity($k, $opacity: 0.3, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-color: rgba(map-get($map: $theme, $key: $k), $opacity) !important;
+      } @else {
+        border-color: rgba(map-get($map: $theme, $key: $k), $opacity);
+      }
+    }
+  }
+}
+
+@mixin border-right-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-right: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-right: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-right-color-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-right-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-right-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-left-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-left: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-left: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-left-color-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-left-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-left-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-bottom-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-bottom: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-bottom: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-bottom-color-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-bottom-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-bottom-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-top-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-top: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-top: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-top-theme($borderWidth, $borderStyle, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-top: $borderWidth $borderStyle map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-top: $borderWidth $borderStyle map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin border-top-color-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        border-top-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        border-top-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin background-theme-opacity($k, $a: 0.3, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        background-color: rgba(map-get($map: $theme, $key: $k), $alpha: $a) !important;
+      } @else {
+        background-color: rgba(map-get($map: $theme, $key: $k), $alpha: $a);
+      }
+    }
+  }
+}
+
+@mixin background-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        background-color: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        background-color: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin background-linear-theme($angle: 0deg, $from: 0%, $to: 100%, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        background-image: linear-gradient(
+          $angle,
+          map-get($map: $theme, $key: "normal") $from,
+          map-get($map: $theme, $key: "main") $to
+        ) !important;
+      } @else {
+        background-image: linear-gradient(
+          $angle,
+          map-get($map: $theme, $key: "normal") $from,
+          map-get($map: $theme, $key: "main") $to
+        );
+      }
+    }
+  }
+}
+@mixin box-shadow-theme($h, $v, $blur, $spread, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        box-shadow: $h $v $blur $spread map-get($map: $theme, $key: $k) !important;
+      } @else {
+        box-shadow: $h $v $blur $spread map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin box-shadow-theme-opacity($h, $v, $blur, $spread, $k, $opacity: 0.3, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        box-shadow: $h $v $blur $spread rgba(map-get($map: $theme, $key: $k), $alpha: $opacity) !important;
+      } @else {
+        box-shadow: $h $v $blur $spread rgba(map-get($map: $theme, $key: $k), $alpha: $opacity);
+      }
+    }
+  }
+}
+
+@mixin box-shadow-inset-theme($h, $v, $blur, $spread, $k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        box-shadow: $h $v $blur $spread map-get($map: $theme, $key: $k) inset !important;
+      } @else {
+        box-shadow: $h $v $blur $spread map-get($map: $theme, $key: $k) inset;
+      }
+    }
+  }
+}
+
+@mixin stroke-theme($k, $important: false) {
+  @each $themename, $theme in $themes {
+    .#{$themename} & {
+      @if $important {
+        stroke: map-get($map: $theme, $key: $k) !important;
+      } @else {
+        stroke: map-get($map: $theme, $key: $k);
+      }
+    }
+  }
+}
+
+@mixin font_size($size: 14, $important: false) {
+  @if ($important) {
+    @at-root body.bigFont & {
+      font-size: #{$size + 2}px !important;
+    }
+    font-size: #{$size}px !important;
+  } @else {
+    @at-root body.bigFont & {
+      font-size: #{$size + 2}px;
+    }
+    font-size: #{$size}px;
+  }
+}
+
+@mixin font_1($important: false) {
+  @include font_size(34, $important);
+}
+
+@mixin font_2($important: false) {
+  @include font_size(24, $important);
+}
+
+@mixin font_2_s($important: false) {
+  @include font_size(22, $important);
+}
+
+@mixin font_3_b($important: false) {
+  @include font_size(20, $important);
+}
+
+@mixin font_3($important: false) {
+  @include font_size(18, $important);
+}
+
+@mixin font_4($important: false) {
+  @include font_size(16, $important);
+}
+
+@mixin font_5($important: false) {
+  @include font_size(14, $important);
+}
+
+@mixin font_5_s($important: false) {
+  @include font_size(13, $important);
+}
+
+@mixin font_6($important: false) {
+  @include font_size(12, $important);
+}
+
+@mixin font_bold {
+  font-weight: 700;
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line > 1) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    white-space: normal !important;
+    word-break: break-all;
+  } @else {
+    overflow: hidden !important;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+  }
+}

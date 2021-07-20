@@ -1,0 +1,29 @@
+{
+  "Function": [
+    {
+      "label": "字符串",
+      "Key": "",
+      "children": [
+        { "label": "生成UUID", "Key": "uuid()" },
+        { "label": "MD5加密", "Key": "md5(str)" },
+        { "label": "向左填充", "Key": "leftFill(str,length,fillStr)" },
+        { "label": "向右填充", "Key": "rightFill(str,length,fillStr)" },
+        { "label": "判断是否为空", "Key": "isBlank(str)" },
+        { "label": "拼接字符串", "Key": "join(delimiter,str1,str2...)" },
+        { "label": "判断是否为数字", "Key": "isNumber(str)" }
+      ]
+    },
+    {
+      "label": "数字",
+      "Key": ""
+    },
+    {
+      "label": "日期",
+      "Key": ""
+    },
+    {
+      "label": "其他",
+      "Key": ""
+    }
+  ]
+}

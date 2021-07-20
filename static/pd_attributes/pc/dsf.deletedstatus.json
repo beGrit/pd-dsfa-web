@@ -1,0 +1,51 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "config": {
+          "disabled": true
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "label",
+        "showType": "text",
+        "changeExecFunction": "renderContext",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称是否显示",
+        "bindControlAttr": "showLabel",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "是否可见",
+        "showType": "boolean",
+        "bindControlAttr": "visible",
+        "inCommonUse": true
+      },
+      {
+        "text": "强制隐藏(不受visible影响)",
+        "bindControlAttr": "forceHidden",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

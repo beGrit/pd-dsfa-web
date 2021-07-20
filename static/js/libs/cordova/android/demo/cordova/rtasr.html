@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../css/css.css" rel="stylesheet"/>
+    <!--<script type="text/javascript" src="../../scripts/jquery-2.0.0.min.js"></script>-->
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+
+        function rtasrStart() {
+            $rtasr.rtasrStart(function(data){
+                  alert("成功");
+            },function(e){
+                  alert(e);
+            });
+        }
+
+         function rtasrClose() {
+
+            $rtasr.rtasrClose(function(data){
+                  alert("成功");
+            },function(e){
+                  alert(e);
+            });
+        }
+
+        function iFlytekTalkMsg(msg){
+            alert(msg);
+        }
+
+
+    </script>
+</head>
+<body>
+<br/>
+<div class="a-btn" onclick="rtasrStart();">开始转写</div>
+<br/>
+<div class="a-btn" onclick="rtasrClose();">结束转写</div>
+</body>
+</html>

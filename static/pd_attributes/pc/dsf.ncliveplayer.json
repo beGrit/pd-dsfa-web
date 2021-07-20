@@ -1,0 +1,242 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "接口地址",
+      "bindControlAttr": "sourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器padding",
+      "bindControlAttr": "playerPadding",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器边距",
+      "bindControlAttr": "playerMargin",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器宽度(支持百分比和固定宽度)",
+      "bindControlAttr": "playerWidth",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器高度(支持百分比和固定高度)",
+      "bindControlAttr": "playerHeight",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "聊天室宽度(*必px)",
+      "bindControlAttr": "charWidth",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否自动播放",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.autoplay",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "是否显示控制栏",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.controller",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "是否显示ppt控制控件",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.pptNav",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },{
+      "text": "是否开启弹幕",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.barrage",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },{
+      "text": "播放器加载时弹幕转台是否显示开启",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.defaultBarrageStatus",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },{
+      "text": "切换按钮",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.switchPlayer",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },{
+      "text": "固定显示控制栏",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.fixedController",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },{
+      "text": "固定位置",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.controllerPosition",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "ppt",
+          "value":"ppt"
+        },
+        {
+          "text": "player",
+          "value": "player"
+        }
+      ]
+    },
+    {
+      "text": "是否在直播模式并且当前暂无直播时在ppt区域显示占位图",
+      "showType": "select",
+      "bindControlAttr": "PolyvParams.pptPlaceholder",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "是否开启送花功能",
+      "showType": "select",
+      "bindControlAttr": "charRoomParams.enableFlower",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "是否开启点赞功能",
+      "showType": "select",
+      "bindControlAttr": "charRoomParams.enableLike",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "弹幕消息颜色",
+      "bindControlAttr": "charRoomParams.customChatColor",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否开启打赏动画效果",
+      "showType": "select",
+      "bindControlAttr": "charRoomParams.enableRewardAnimation",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    },
+    {
+      "text": "是否开启热度更新",
+      "showType": "select",
+      "bindControlAttr": "charRoomParams.enableUpdatePageviews",
+      "inCommonUse": true,
+      "dictionary": [{
+          "text": "是",
+          "value":true
+        },
+        {
+          "text": "否",
+          "value": false
+        }
+      ]
+    }
+  ]
+}]

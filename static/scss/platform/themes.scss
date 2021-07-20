@@ -1,0 +1,183 @@
+$themes: (
+  red-theme: (
+    //一级色
+    main: #c62f26,
+    //常规色
+    normal: #ff7200,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮文字颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #e63b2e,
+    // 默认阴影颜色
+    shadow_normal: rgba(0, 0, 0, 0.1),
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0,
+  ),
+  blue-theme: (
+    //一级色
+    main: #1a66b1,
+    //常规色
+    normal: #3c8ddb,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #3c8ddb,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0,
+  ),
+  green-theme: (
+    //一级色
+    main: #189a5a,
+    //常规色
+    normal: #4daf7b,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #4daf7b,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0,
+  ),
+  orange-theme: (
+    //一级色
+    main: #fc7001,
+    //常规色
+    normal: #ffb142,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #ffb142,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0,
+  ),
+  darkred-theme: (
+    //一级色
+    main: #c60100,
+    //常规色
+    normal: #c60100,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #c60100,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0
+  ),
+  darkblue-theme: (
+    //一级色
+    main: #2659bf,
+    //常规色
+    normal: #2659bf,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #3c7ade,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0
+  ),
+  // 钉钉
+  dingtalk-theme:  (
+    //一级色
+    main: #3C8AF8,
+    //常规色
+    normal: #3C8AF8,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #3C8AF8,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色 
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0
+  ),
+  // 黑金
+  heijin-theme: (
+    // 国家电网
+    // 主色
+    main: #ECBD63,
+    // 辅色
+    normal: #ECBD63,
+    //次要按钮鼠标背景色
+    button_plain_bgcolor: #fff,
+    //次要按钮鼠标边框色
+    button_plain_bordercolor: #c9c9c9,
+    //次要按钮鼠标悬浮颜色
+    button_plain_fontcolor: #5f5f5f,
+    // 导航激活背景色
+    nav_active_bgColor: #ECBD63,
+    //pc端底部默认颜色
+    bottom_color: #fff,
+    // 移动端顶部边框线颜色
+    mobile_head_border_color: #ebedf0,
+    // 移动端底部默认颜色
+    mobile_foot_color: #fff,
+    // 移动端底部边框线颜色
+    mobile_foot_border_color: #ebedf0
+  )
+);

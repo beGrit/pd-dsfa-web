@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("camera ready");
+			  }
+			  function base64Photo(){
+			  	navigator.camera.getPicture(baseOnSuccess, baseOnFail, { quality: 50,
+				    destinationType: Camera.DestinationType.DATA_URL
+				});
+			  }
+			  
+			  function baseOnSuccess(imageData) {
+				 var image = document.getElementById('myImage');
+				 image.src = "data:image/jpeg;base64," + imageData;
+			  }
+				
+			  function baseOnFail(message) {
+				 alert('Failed because: ' + message);
+			  }
+			  
+			  function srcPhoto(){
+			 	 navigator.camera.getPicture(srcOnSuccess,srcOnFail,{ quality: 50,
+   				 destinationType: Camera.DestinationType.FILE_URI });
+			  }
+			  function srcOnSuccess(imageURI) {
+			     var image = document.getElementById('myImage');
+			     image.src = imageURI;
+			  }
+			
+			  function srcOnFail(message) {
+			     alert('Failed because: ' + message);
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="base64Photo();">拍照（base64）</button>
+         <br/>
+         <button onclick="srcPhoto();">拍照（src）</button>
+         <br/>
+         <img id="myImage" height="100"/>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text"
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "label",
+        "showType": "text"
+      },
+      {
+        "text": "名称是否显示",
+        "bindControlAttr": "showLabel",
+        "showType": "boolean"
+      },
+      {
+        "text": "是否只读",
+        "showType": "boolean",
+        "bindControlAttr": "readOnly"
+      },
+      {
+        "text": "是否失效",
+        "showType": "boolean",
+        "bindControlAttr": "disabled"
+      },
+      {
+        "text": "是否可见",
+        "showType": "boolean",
+        "bindControlAttr": "visible"
+      },
+      {
+        "text": "级别选择",
+        "showType": "rangeSelect",
+        "bindControlAttr": "range",
+        "dictionary": [
+          {
+            "text": "省",
+            "value": "0"
+          },
+          {
+            "text": "市",
+            "value": "1"
+          },
+          {
+            "text": "区",
+            "value": "2"
+          },
+          {
+            "text": "街道",
+            "value": "3"
+          },
+          {
+            "text": "村居",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "text": "上级编码",
+        "showType": "text",
+        "showExpress": "isShowRange",
+        "bindControlAttr": "superCode"
+      },
+      {
+        "text": "固定编码",
+        "showType": "text",
+        "bindControlAttr": "fixedCode"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "值属性设置",
+        "bindControlAttr": "metadata.valueAttributes",
+        "showType": "dialog",
+        "config": {
+          "content": "DesValueAttributes",
+          "width": "50vw",
+          "height": "50vh",
+          "buttonText": "设置",
+          "title": "设置"
+        }
+      },
+      {
+        "text": "描述文字",
+        "showType": "text",
+        "bindControlAttr": "dataCapion",
+        "desc": "<p>移动端运行该组件时会在名称后追加一段备注文字。</p><p>因布局上的问题PC端暂不支持</p>"
+      }
+    ]
+  }
+]

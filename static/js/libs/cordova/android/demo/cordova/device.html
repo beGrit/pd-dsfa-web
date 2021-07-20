@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      var $body = $("body");
+			      for(var key in device){
+			          if(typeof(device[key])=="function"){
+			               $body.append("<p style='color:green'>function:"+key+"</p>");
+			               device[key](function(param){
+			                    for(var k in param){
+			                        $body.append("<p style='color:red'>"+k+":"+param[k]+"</p>");
+			                    }
+			               });
+			          }else{
+			            $body.append("<p>"+key+":"+device[key]+"</p>");
+			          }
+			      }
+			  }
+		</script>
+    </head>
+    <body>
+    </body>
+</html>

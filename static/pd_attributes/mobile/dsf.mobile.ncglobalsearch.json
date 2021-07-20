@@ -1,0 +1,49 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "课程详情地址",
+        "bindControlAttr": "courseDetail",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "专题详情地址",
+        "bindControlAttr": "specialDetail",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "频道详情地址",
+        "bindControlAttr": "channelDetail",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "资料详情地址",
+        "bindControlAttr": "newsDetail",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "直播详情地址",
+        "bindControlAttr": "liveDetail",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "师资详情地址",
+        "bindControlAttr": "teacherDetail",
+        "showType": "text",
+        "inCommonUse": true
+      }
+    ]
+  }
+]

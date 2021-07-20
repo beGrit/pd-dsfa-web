@@ -1,0 +1,114 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text"
+      },
+      {
+        "text": "按钮设置",
+        "showType": "dialog",
+        "bindControlAttr": "buttons",
+        "config": {
+          "content": "DesButtonEdit",
+          "params": {
+            "isMobile": true
+          },
+          "width": "1400px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "排列方式",
+        "bindControlAttr": "align",
+        "showType": "select",
+        "dictionary": [
+          {
+            "text": "居左",
+            "value": "left"
+          },
+          {
+            "text": "居中",
+            "value": "center"
+          },
+          {
+            "text": "居右",
+            "value": "right"
+          },
+          {
+            "text": "水平等分",
+            "value": "justify-horizontal"
+          },
+          {
+            "text": "垂直等分",
+            "value": "justify-vertical"
+          },
+          {
+            "text": "图标居左，按钮居右",
+            "value": "justify-iconleft-buttonright"
+          }
+        ]
+      },
+      {
+        "text": "尺寸",
+        "showType": "select",
+        "bindControlAttr": "size",
+        "dictionary": [
+          {
+            "text": "普通",
+            "value": ""
+          },
+          {
+            "text": "小",
+            "value": "small"
+          }
+        ]
+      },
+      {
+        "text": "最多显示按钮数(超出显示“更多”)",
+        "showType": "number",
+        "bindControlAttr": "maxNumber",
+        "config": {
+          "min": 1
+        }
+      },
+      {
+        "text": "更多按钮形态",
+        "showType": "select",
+        "bindControlAttr": "moreButtonStyle",
+        "dictionary": [
+          {
+            "text": "图标",
+            "value": "icon-text"
+          },
+          {
+            "text": "普通按钮",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "text": "更多按钮文字",
+        "showType": "text",
+        "bindControlAttr": "moreButtonText"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

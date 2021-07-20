@@ -1,0 +1,64 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "接口地址",
+        "bindControlAttr": "url",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "icon列表(,分割)",
+        "bindControlAttr": "extsIcons",
+        "showType": "text",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "风格样式",
+    "attributes": [
+      {
+        "text": "头像高度",
+        "bindControlAttr": "headHeight",
+        "showType": "number",
+        "inCommonUse": true
+      },
+      {
+        "text": "高度(像素单位带上px)",
+        "bindControlAttr": "height",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "内边距",
+        "showType": "multipleText",
+        "bindControlAttr": "padding",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      }
+    ]
+  }
+]

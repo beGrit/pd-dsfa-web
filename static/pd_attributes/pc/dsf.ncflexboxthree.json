@@ -1,0 +1,100 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "布局方式",
+        "bindControlAttr": "layout",
+        "showType": "select",
+        "dictionary": [
+          {
+            "text": "左右",
+            "value": "row"
+          },
+          {
+            "text": "右左",
+            "value": "row-reverse"
+          },
+          {
+            "text": "上下",
+            "value": "column"
+          },
+          {
+            "text": "下上",
+            "value": "column-reverse"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "盒子高度",
+        "bindControlAttr": "boxHeight",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "盒子宽度",
+        "bindControlAttr": "boxWidth",
+        "showType": "text",
+        "inCommonUse": true
+      },      
+      {
+        "text": "模块边距",
+        "bindControlAttr": "margin",
+        "showType": "multipleText",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "左边拦宽度",
+        "bindControlAttr": "leftBarStyle",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "中间拦宽度",
+        "bindControlAttr": "centerBarStyle",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "右边拦宽度",
+        "bindControlAttr": "rightBarStyle",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        },
+        "inCommonUse": true
+      }
+    ]
+  }
+]

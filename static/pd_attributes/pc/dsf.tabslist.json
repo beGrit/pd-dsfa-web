@@ -1,0 +1,90 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text"
+      },
+      {
+        "text": "配置跳转iframe的NAME标识",
+        "bindControlAttr": "targetIframeName",
+        "showType": "text"
+      },
+      {
+        "text": "配置跳转iframe地址",
+        "bindControlAttr": "targetIframeSrc",
+        "showType": "text"
+      },
+      {
+        "text": "启用搜索框",
+        "showType": "boolean",
+        "bindControlAttr": "openSearchBox"
+      },
+      {
+        "text": "不需要请求数据",
+        "showType": "boolean",
+        "bindControlAttr": "tabsNoDataUrl"
+      },
+      {
+        "text": "默认选中标签KEY",
+        "showType": "text",
+        "bindControlAttr": "tabsDefaultAction"
+      },
+      {
+        "text": "标签配置",
+        "showType": "dialog",
+        "bindControlAttr": "tabsConfig",
+        "config": {
+          "title": "标签配置",
+          "content": "TabsListSetting",
+          "width": "1000px",
+          "height": "60vh",
+          "buttonText": "设置",
+          "other": {}
+        }
+      }
+    ]
+  },
+  {
+    "name": "默认模板",
+    "attributes": [
+      {
+        "text": "标题",
+        "bindControlAttr": "defaultTemplate.title",
+        "showType": "text"
+      },
+      {
+        "text": "开始时间",
+        "bindControlAttr": "defaultTemplate.stime",
+        "showType": "text"
+      },
+      {
+        "text": "结束时间",
+        "bindControlAttr": "defaultTemplate.etime",
+        "showType": "text"
+      },
+      {
+        "text": "班主任",
+        "bindControlAttr": "defaultTemplate.teacher",
+        "showType": "text"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+			  function getLocation(){
+			    var result={"uid":"123"}
+			    $BaiduLocation.getLocation(result,function(res){
+                      alert(res);
+			     },function(res){
+                      alert(res);
+			     });
+			  }
+
+			  function openLocation(){
+			    var result=[{ "latitude":"30.576705",
+			                   "longitude":"104.021163",
+			                   "name":"这是定位的名称定位",
+			                   "address":"123",
+			                   "scale":"123",
+			                   "infoUrl":"123"
+			    },{ "latitude":"29.665051",
+			                   "longitude":"106.468004",
+			                   "name":"这是定位",
+			                   "address":"123",
+			                   "scale":"123",
+			                   "infoUrl":"123"
+			    }]
+			    var data={"data":result}
+
+			    $BaiduLocation.openLocation(data,function(res){
+                      alert(res);
+			     },function(res){
+                      alert(res);
+			     });
+			  }
+    </script>
+</head>
+<body>
+
+<button onclick="getLocation();">获取当前位置</button>
+<button onclick="openLocation();">查看位置</button>
+</body>
+</html>

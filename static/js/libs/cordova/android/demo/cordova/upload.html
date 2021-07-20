@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+              var recordId;
+			  function recordStart(){//结束录音时返回录音对象
+                _DsfRecord.recordStart({},function(result){
+                        recordId = result['id'];
+			            alert(JSON.stringify(result));
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+			  var p1 = "/storage/emulated/0/Huawei/MagazineUnlock/magazine-unlock-03-2.3.1722-9A4A4E8F7CB2A9429B0581237D35F5BD.jpg";
+			  var p2 = "/storage/emulated/0/Huawei/MagazineUnlock/magazine-unlock-06-2.3.1722-A2921E04A04E54EA6F9812604D67ECB7.jpg";
+			  var p3 = "/data/user/0/com.dreamit.offlineTest/cache/takephoto_cache/magazine-unlock-03-2.3.1722-9A4A4E8F7CB2A9429B0581237D35F5BD.jpg";
+			  var p4 = "/data/user/0/com.dreamit.offlineTest/cache/takephoto_cache/magazine-unlock-06-2.3.1722-A2921E04A04E54EA6F9812604D67ECB7.jpg";
+
+			  function fileUpload(){//开始上传
+                _DsfUpload.upload({"fileArray":[{"path":""},{"path":""}]},function(result){
+			            alert(result);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+    </script>
+</head>
+<body>
+<br><br>
+<button onclick="fileUpload();">上传文件</button>
+</body>
+</html>

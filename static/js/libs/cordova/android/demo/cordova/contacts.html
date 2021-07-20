@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+		       
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			     alert('contacts ready!');
+			  }
+			  
+			  function contacts(){
+			     var myContact = navigator.contacts.create({"displayName": "Test User"});
+			  }
+			  
+			  function onSuccess(contacts) {
+			        alert(JSON.stringify(contacts));
+				    alert('Found ' + contacts.length + ' contacts.');
+				};
+
+				function onError(contactError) {
+				    alert('onError!');
+				};
+              function demo(){
+                  // find all contacts with 'Bob' in any name field
+				var options      = new ContactFindOptions();
+				options.filter   = "文进";
+				options.multiple = true;
+				options.desiredFields = [navigator.contacts.fieldType.id];
+				var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+				navigator.contacts.find(fields, onSuccess, onError, options);
+              }
+
+		</script>
+    </head>
+    <body>
+         <button onclick="contacts();">添加联系人</button>
+         <button onclick="demo();">demo</button>
+    </body>
+</html>

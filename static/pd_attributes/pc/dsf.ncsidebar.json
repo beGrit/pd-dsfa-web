@@ -1,0 +1,128 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "组件高度",
+        "bindControlAttr": "tabHeight",
+        "showType": "text",
+        "changeExecFunction": "resizeHeight",
+        "inCommonUse": true
+      },
+      {
+        "text": "组件风格",
+        "bindControlAttr": "tabStyle",
+        "showType": "select",
+        "dictionary": [
+          {
+            "text": "原始风格",
+            "value": "card"
+          },
+          {
+            "text": "简洁风格",
+            "value": ""
+          },
+          {
+            "text": "卡片风格",
+            "value": "border-card"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "组件位置",
+        "bindControlAttr": "tabPosition",
+        "showType": "select",
+        "dictionary": [
+          {
+            "text": "顶部",
+            "value": "top"
+          },
+          {
+            "text": "右侧",
+            "value": "right"
+          },
+          {
+            "text": "底部",
+            "value": "bottom"
+          },
+          {
+            "text": "左侧",
+            "value": "left"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "页签是否可关闭",
+        "showType": "boolean",
+        "bindControlAttr": "enableDelete",
+        "inCommonUse": true
+      },
+      {
+        "text": "是否有边距",
+        "showType": "boolean",
+        "bindControlAttr": "showPadding",
+        "inCommonUse": true
+      },
+      {
+        "text": "页签设置",
+        "showType": "dialog",
+        "bindControlAttr": "slots",
+        "changeExecFunction": "changeActive",
+        "config": {
+          "content": "DsfSideBarEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "buttonText": "编辑页签",
+          "title": "编辑页签",
+          "hasBadge": true
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内容区域内边距",
+        "showType": "multipleText",
+        "bindControlAttr": "contentPadding",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

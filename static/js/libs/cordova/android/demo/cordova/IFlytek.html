@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../css/css.css" rel="stylesheet"/>
+    <!--<script type="text/javascript" src="../../scripts/jquery-2.0.0.min.js"></script>-->
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+
+        function wakeStart() {
+            $IFlytek.wakeStart(function(data){
+                alert(data);
+            },function(e){
+                alert(e);
+            });
+        }
+
+          function wakeStop() {
+            $IFlytek.wakeStop(function(data){
+
+            },function(e){
+
+            });
+        }
+
+         function startTts() {
+            $IFlytek.startTts('{"message":"这是结束"}',function(data){
+
+            },function(e){
+                  alert(e);
+            });
+        }
+
+         function stopTts() {
+            $IFlytek.stopTts(function(data){
+                  alert("成功");
+            },function(e){
+                  alert(e);
+            });
+        }
+
+
+    </script>
+</head>
+<body>
+<br/>
+<div class="a-btn" onclick="wakeStart();">语音唤醒开始</div>
+<br/>
+<div class="a-btn" onclick="wakeStop();">语音唤醒结束</div>
+<br/>
+<div class="a-btn" onclick="startTts();">文字转语音开始</div>
+<br/>
+<div class="a-btn" onclick="stopTts();">文字转语音结束</div>
+</body>
+</html>

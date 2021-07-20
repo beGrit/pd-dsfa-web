@@ -1,0 +1,200 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "二级标题占几行",
+        "bindControlAttr": "subtitleLineNum",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 1,
+          "max": 4
+        }
+      },
+      {
+        "text": "右侧图标",
+        "bindControlAttr": "rightIcon",
+        "showType": "text",
+        "desc": "<p><button onclick=\"window.open(dsf.url.getWebPath('$/pc/iconfont/demo_index.html'), 'icondemo')\">查看图标</button></p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "是否强制使用默认样式",
+        "bindControlAttr": "useDefaultStyle",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "数据请求地址",
+        "bindControlAttr": "dataSourceUrl",
+        "showType": "text",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "字段设置",
+    "attributes":[
+      {
+        "text": "一级标题",
+        "bindControlAttr": "titleKey",
+        "showType": "text"
+      },
+      {
+        "text": "时间字段名",
+        "bindControlAttr": "timeKey",
+        "showType": "text"
+      },
+      {
+        "text": "二级标题",
+        "bindControlAttr": "subtitleKey",
+        "showType": "text"
+      },
+      {
+        "text": "角标",
+        "bindControlAttr": "badgeKey",
+        "showType": "text"
+      }
+    ]
+  },
+  {
+    "name": "图标默认样式",
+    "attributes": [
+      {
+        "text": "展示优先级",
+        "bindControlAttr": "showPriority",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "图片优先",
+            "value": "img"
+          },
+          {
+            "text": "icon优先",
+            "value": "icon"
+          }
+        ]
+      },
+      {
+        "text": "是否有背景",
+        "bindControlAttr": "menuHasBg",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景色",
+        "bindControlAttr": "menuColor",
+        "showType": "text",
+        "showExpress": "@[menuHasBg]",
+        "desc": "<p><b>theme-linear</b>: 主题色渐变<br/><b>theme</b>: 主题色</p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景阴影",
+        "bindControlAttr": "menuBgShadow",
+        "showType": "boolean",
+        "showExpress": "@[menuHasBg]",
+        "inCommonUse": true
+      },
+      {
+        "text": "前景色",
+        "bindControlAttr": "menuForeColor",
+        "showType": "text",
+        "desc": "<p><b>theme-linear</b>: 主题色渐变<br/><b>theme</b>: 主题色</p>",
+        "inCommonUse": true
+      },
+      {
+        "text": "前景阴影",
+        "bindControlAttr": "menuShadow",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "边框尺寸（小数）",
+        "bindControlAttr": "menuBorderSize",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0.4,
+          "step": 0.01,
+          "precision": 3
+        }
+      },
+      {
+        "text": "图标尺寸（小数）",
+        "bindControlAttr": "menuIconSize",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0.3,
+          "step": 0.01,
+          "precision": 3
+        }
+      },
+      {
+        "text": "圆角（小数）",
+        "bindControlAttr": "menuBorderRadius",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0,
+          "step": 0.01,
+          "precision": 3
+        }
+      }
+    ]
+  },
+  {
+    "name": "角标样式",
+    "attributes": [
+      {
+        "text": "展示方式",
+        "bindControlAttr": "badgeShowType",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "文字（非布尔值有效）",
+            "value": "text"
+          },
+          {
+            "text": "圆点",
+            "value": "dot"
+          }
+        ]
+      },
+      {
+        "text": "颜色",
+        "bindControlAttr": "badgeColor",
+        "showType": "text",
+        "desc": "<p><b>theme</b>: 主题色</p>",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "desc": "<p><b style=\"color: #aaa\">属性</b><br/><b>item-click</b> : 传入方法，点击菜单按钮时会调用该方法，返回false将不执行跳转</p><br/><p><b style=\"color: #aaa\">插槽</b>（优先级：id插槽 > 索引插槽 > 全局插槽）<br/><b>id插槽：</b>row-left-行id、row-行id、row-right-行id<br/><b>索引插槽：</b>index-left-索引、row-索引、row-right-索引<br/><b>全局插槽：</b>index-left、default、row-right</p>",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1200px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

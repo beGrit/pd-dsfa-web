@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+<!--			      alert("scan ready");-->
+			  }
+			  
+			  function option1(){
+			      $DeviceIdPlugin.getDeviceSerialId(function(result){
+			        alert(result);
+			        console.log(result);
+			      },function(error){
+
+			      });
+			  }
+
+			  function option2(){
+                 var param = {"token":"5MNCgdH9OOcFuh5d+9vSUg6GBIzoAMqYKqJ5oz4J42k=@kw57.cn.rongnav.com;kw57.cn.rongcfg.com","authorization_token":"","Cookie":""}
+			      $RIMOptionPlugin.connect(JSON.stringify(param),function(result){
+                        alert("connect success");
+			      },function(error){
+                        alert("connect error");
+			      });
+			  }
+
+
+			  function option3(){
+			    var param = {"roomId":"123","userName":"JSK","meetingName":"TEST"}
+			      $RIMOptionPlugin.meeting(JSON.stringify(param),function(result){
+<!--                        alert("meeting success");-->
+			      },function(error){
+<!--                        alert("meeting error");-->
+			      });
+			  }
+
+			  window['meetingExit'] = function(){
+			    alert("meetingExit");
+			  }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<button onclick="option1();">插件一</button>
+<br/>
+<button onclick="option2();">插件二</button>
+<br/>
+<button onclick="option3();">会议</button>
+
+</body>
+</html>

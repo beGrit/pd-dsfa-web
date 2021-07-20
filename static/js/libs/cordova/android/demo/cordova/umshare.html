@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+			  function shareWxText(){
+			     $Umshare.shareText("HelloWorld",function(res){
+                      alert(res);
+			     },function(res){
+                      alert(res);
+			     });
+			  }
+
+			  function shareHtml(){
+			     $Umshare.shareHtml({"url":"http://www.baidu.com","title":"分享的标题","thumb":"http://img.sootuu.com/vector/2006-4/2006419181944111.jpg","description":"此次分享的描述文本"},function(res){
+                      alert(res);
+			     },function(res){
+                      alert(res);
+			     });
+			  }
+
+			  function shareImgUrl(){
+			     $Umshare.shareImgUrl("http://img.sootuu.com/vector/2006-4/2006419181944111.jpg",function(res){
+                      alert(res);
+			     },function(res){
+                      alert(res);
+			     });
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="shareWxText();">微信及朋友圈分享(文本)</button><br><br>
+         <button onclick="shareHtml();">微信及朋友圈分享(网页)</button><br><br>
+         <button onclick="shareImgUrl();">微信及朋友圈分享(网络图片)</button><br><br>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器高度",
+      "bindControlAttr": "playerHeight",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "组件宽度",
+      "bindControlAttr": "conWidth",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "视频直播中是否允许暂停",
+      "bindControlAttr": "ckplayerPause",
+      "showType": "boolean",
+      "inCommonUse": true
+    },{
+      "text": "视频直播中是否隐藏进度条",
+      "bindControlAttr": "ckplayerShowProgress",
+      "showType": "boolean",
+      "inCommonUse": true
+    } 
+
+  ]
+}]

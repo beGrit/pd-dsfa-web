@@ -1,0 +1,58 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    },
+    {
+      "text": "检索地址",
+      "bindControlAttr": "searchUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "课程跳转地址",
+      "bindControlAttr": "courseSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "专题跳转地址",
+      "bindControlAttr": "specialSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "频道跳转地址",
+      "bindControlAttr": "channelSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "师资跳转地址",
+      "bindControlAttr": "teacherSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "直播跳转地址",
+      "bindControlAttr": "liveSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "新闻跳转地址",
+      "bindControlAttr": "newsSourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    }
+  ]
+}]

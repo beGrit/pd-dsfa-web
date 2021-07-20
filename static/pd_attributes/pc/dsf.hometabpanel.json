@@ -1,0 +1,155 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "标题(不写不显示)",
+        "bindControlAttr": "title",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "标题Icon(不写不显示)",
+        "bindControlAttr": "titleIcon",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "更多Icon(不写不显示)",
+        "bindControlAttr": "moreIcon",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "徽章数量接口",
+        "bindControlAttr": "badgeUrl",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "页签设置",
+        "showType": "dialog",
+        "bindControlAttr": "slots",
+        "changeExecFunction": "tabChange",
+        "inCommonUse": true,
+        "config": {
+          "content": "TabPanelEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "buttonText": "编辑页签",
+          "title": "编辑页签",
+          "hasBadge": true
+        }
+      },
+      {
+        "text": "是否可见",
+        "bindControlAttr": "visible",
+        "showType": "boolean",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "风格样式",
+    "attributes": [
+      {
+        "text": "面板风格",
+        "showType": "select",
+        "bindControlAttr": "styleType",
+        "dictionary": [
+          {
+            "text": "简洁",
+            "value": "one"
+          },
+          {
+            "text": "紧凑",
+            "value": "compact"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "宽度(像素单位带上px)",
+        "bindControlAttr": "width",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "高度(像素单位带上px)",
+        "bindControlAttr": "height",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距",
+        "showType": "multipleText",
+        "bindControlAttr": "margin",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内边距",
+        "showType": "multipleText",
+        "bindControlAttr": "padding",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "显示阴影",
+        "bindControlAttr": "showShadow",
+        "showType": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

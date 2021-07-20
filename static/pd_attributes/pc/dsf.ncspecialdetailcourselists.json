@@ -1,0 +1,22 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "接口地址",
+      "bindControlAttr": "url",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    }
+  ]
+}]

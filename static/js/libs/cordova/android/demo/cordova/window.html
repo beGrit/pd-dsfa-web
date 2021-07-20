@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			       alert('ready!');
+			  }
+			  function openWindow(){
+			   	   //cordova 浏览器
+			       var cordovaWindow = window.open('http://www.baidu.com', '_self', 'location=yes');
+			       //chrome 浏览器
+			      // var chromeWindow = window.open('http://www.baidu.com', '_blank', 'location=no');
+			       // 系统 浏览器
+			       //var systemWindow = window.open('http://www.baidu.com','_system','location=yes');
+			  }
+		</script>
+    </head>
+    <body>
+          <button onclick="openWindow();">openWindow</button>
+    </body>
+</html>

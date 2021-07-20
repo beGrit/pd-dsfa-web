@@ -1,0 +1,212 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "hide": true,
+    "group": "流程基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ID",
+    "desc": "流程的唯一标识"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "流程基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Name",
+    "desc": "流程的名称",
+    "isBase": true,
+    "required": true
+  },
+  {
+    "name": "版本",
+    "value": "",
+    "group": "流程基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Version",
+    "desc": "流程的版本号",
+    "isBase": true,
+    "nodeType": "flow"
+  },
+  {
+    "name": "办理期限类型",
+    "value": "",
+    "group": "流程基本信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "无限制"
+          },
+          {
+            "value": 1,
+            "text": "自然日"
+          },
+          {
+            "value": 2,
+            "text": "工作日"
+          },
+          {
+            "value": 13,
+            "text": "(自然日)时"
+          },
+          {
+            "value": 14,
+            "text": "(自然日)分"
+          },
+          {
+            "value": 23,
+            "text": "(工作日)时"
+          },
+          {
+            "value": 24,
+            "text": "(工作日)分"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "TimeLimit",
+    "nodeName3": "Type",
+    "desc": "期限类型:0：无限制，1:自然日，2:工作日，13:(自然日)时，14:(自然日)分，23:(工作日)时，24:(工作日)分",
+    "isBase": true,
+    "showRob": "Value"
+  },
+  {
+    "name": "办理期限值",
+    "value": "",
+    "group": "流程基本信息",
+    "editor": "numberbox",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "TimeLimit",
+    "nodeName3": "Value",
+    "desc": "流程的办理期限:限制值",
+    "isBase": true
+  },
+  {
+    "name": "流程说明",
+    "value": "",
+    "group": "流程基本信息",
+    "editor": "textarea",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Desc",
+    "desc": "流程的说明"
+  },
+  {
+    "name": "启动流程",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Event",
+    "nodeName3": "onStart",
+    "desc": "启动流程",
+    "type": "dialog",
+    "config": {
+      "title": "启动流程",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "办结流程",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Event",
+    "nodeName3": "onClose",
+    "desc": "办结流程",
+    "type": "dialog",
+    "config": {
+      "title": "办结流程",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "强制办结",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Event",
+    "nodeName3": "onForceClose",
+    "desc": "强制办结",
+    "type": "dialog",
+    "config": {
+      "title": "强制办结",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "增发",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Event",
+    "nodeName3": "onExSend",
+    "desc": "增发",
+    "type": "dialog",
+    "config": {
+      "title": "增发",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "销毁",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Event",
+    "nodeName3": "onDestory",
+    "desc": "销毁",
+    "type": "dialog",
+    "config": {
+      "title": "销毁",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting"
+    }
+  },
+  {
+    "name": "应用接入商ID",
+    "value": "",
+    "group": "厂商信息",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Vendor",
+    "nodeName3": "ID",
+    "desc": "厂商ID"
+  },
+  {
+    "name": "应用接入商名称",
+    "value": "",
+    "group": "厂商信息",
+    "nodeLevel": 3,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Vendor",
+    "nodeName3": "Name",
+    "desc": "厂商信息"
+  }
+]

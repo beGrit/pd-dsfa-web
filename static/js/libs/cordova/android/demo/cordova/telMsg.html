@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			    window.addEventListener('deviceready', deviceready);
+				function deviceready(e){
+				   alert("tel ready!");
+				}
+				
+				function  tel(){
+				   location.href="tel:15021672934";
+				}
+				
+				function sms(){
+				   location.href="sms:15021672934";
+				}
+				
+		</script>
+    </head>
+    <body>
+         <a href="tel:15021672934">打电话</a><br/>
+         <a href="sms:15021672934">发短信</a><br/>
+         <button onclick="tel();">打电话</button><br/>
+         <button onclick="sms();";>发短信</button>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+[
+    {
+      "name": "基础属性",
+      "attributes": [
+        {
+          "text": "接口",
+          "bindControlAttr": "url",
+          "showType": "text",
+          "desc": ""
+        }
+      ]
+    }
+  ]
+  

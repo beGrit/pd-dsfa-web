@@ -1,0 +1,34 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "推荐标题",
+      "bindControlAttr": "recommendText",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "推荐地址",
+      "bindControlAttr": "recommendUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "师资详情",
+      "showType": "text",
+      "bindControlAttr": "teacherDetailUrl",
+      "inCommonUse": true
+    },
+    {
+      "text": "师资列表",
+      "showType": "text",
+      "bindControlAttr": "teacherListUrl",
+      "inCommonUse": true
+    }
+  ]
+}]

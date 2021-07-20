@@ -1,0 +1,77 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },{
+      "text": "底部名称",
+      "bindControlAttr": "list",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "请求地址",
+      "bindControlAttr": "reqUrl",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "顶部字段设置",
+      "bindControlAttr": "topString",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "单位",
+      "bindControlAttr": "unit",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "色号",
+      "bindControlAttr": "colorList",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "对应字段取值",
+      "bindControlAttr": "fieldList",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+        "text": "自定义菜单1",
+        "bindControlAttr": "menus",
+        "showType": "dialog",
+        "changeExecFunction": "tabChange",
+        "inCommonUse": true,
+        "desc":"配置第一部分菜单",
+        "config": {
+          "content": "MeMenusEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "buttonText": "自定义菜单",
+          "title": "自定义菜单",
+          "hasBadge": true
+        }
+      },
+      {
+        "text": "自定义菜单2",
+        "bindControlAttr": "menus2",
+        "showType": "dialog",
+        "changeExecFunction": "tabChange",
+        "inCommonUse": true,
+        "desc":"配置第二部分菜单",
+        "config": {
+          "content": "MeMenusEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "buttonText": "自定义菜单",
+          "title": "自定义菜单",
+          "hasBadge": true
+        }
+      }
+  ]
+}]

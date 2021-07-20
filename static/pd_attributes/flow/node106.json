@@ -1,0 +1,304 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ID",
+    "desc": "节点的唯一标识"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "节点基本信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Name",
+    "desc": "节点的名称",
+    "isBase": true,
+    "required": true
+  },
+  {
+    "name": "任务类型",
+    "value": "python任务",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Type",
+    "desc": "任务类型"
+  },
+  {
+    "name": "处理模式",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "单人办理"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "Type",
+    "desc1": "入线信息",
+    "desc": "处理模式:0：单人办理"
+  },
+  {
+    "name": "人数",
+    "value": "1",
+    "group": "入线信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "RushInfo",
+    "desc": "抢办人数",
+    "hide": true,
+    "unit": "（人）"
+  },
+  {
+    "name": "处理范围",
+    "value": {
+      "Type": 51,
+      "IsUser": 1,
+      "Rule": [
+        {
+          "RobotID": "106_robot",
+          "RobotName": "python任务代理机器人",
+          "IsDeep": 1,
+          "IsUser": 1,
+          "IsSelected": 1,
+          "RoleID": "",
+          "RoleName": "",
+          "Type": 51,
+          "DeptID": "",
+          "DeptName": ""
+        }
+      ]
+    },
+    "group": "入线信息",
+    "class": "RangeRule",
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "RangeRule",
+    "desc": "处理范围",
+    "type": "dialog",
+    "config": {
+      "content": "RangeRule",
+      "width": "1100px",
+      "height": "552px"
+    },
+    "isBase": true,
+    "hide": true
+  },
+  {
+    "name": "展开层级",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "不展开"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "ExpandLevel",
+    "desc1": "入线信息",
+    "desc": "展开层级: 不展开"
+  },
+  {
+    "name": "继承节点经办人",
+    "value": 0,
+    "group": "入线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "不继承"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "InLine",
+    "nodeName2": "IsInherit",
+    "desc": "继承节点经办人：0，不继承"
+  },
+  {
+    "name": "出线信息类型",
+    "value": 1,
+    "group": "出线信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 1,
+            "text": "与分支"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "Type",
+    "desc1": "出线信息",
+    "desc": "出线信息类型：与分支"
+  },
+  {
+    "name": "是否可以批量发送",
+    "value": 0,
+    "group": "出线信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "不可以"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "IsEnableBatch",
+    "desc": "是否可以批量发送：不可以"
+  },
+  {
+    "name": "退回控制",
+    "value": 0,
+    "group": "出线信息",
+    "nodeLevel": 2,
+    "nodeName1": "OutLine",
+    "nodeName2": "SendBackType",
+    "desc": "退回控制：退回到上一节点",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "退回到上一节点"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "python任务",
+    "value": "",
+    "group": "脚本信息",
+    "nodeLevel": 2,
+    "nodeName1": "Expression",
+    "nodeName2": "Content",
+    "desc1": "事件",
+    "desc": "发送后",
+    "type": "dialog",
+    "config": {
+      "title": "python任务",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "python"
+    },
+    "isBase": true
+  },
+  {
+    "name": "超时时间",
+    "value": "",
+    "group": "脚本信息",
+    "editor": "numberbox",
+    "nodeLevel": 2,
+    "nodeName1": "Expression",
+    "nodeName2": "TimeOut",
+    "desc": "超时时间,单位（s）",
+    "isBase": true
+  },
+  {
+    "name": "开始执行",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onStart",
+    "desc1": "事件",
+    "desc": "开始执行",
+    "type": "dialog",
+    "config": {
+      "title": "开始执行",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "执行结束",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onComplete",
+    "desc1": "事件",
+    "desc": "执行结束",
+    "type": "dialog",
+    "config": {
+      "title": "执行结束",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "异常",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onError",
+    "desc1": "事件",
+    "desc": "异常",
+    "type": "dialog",
+    "config": {
+      "title": "异常",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "超时",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onTimeout",
+    "desc1": "事件",
+    "desc": "超时",
+    "type": "dialog",
+    "config": {
+      "title": "超时",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  }
+]

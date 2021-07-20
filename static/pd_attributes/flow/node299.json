@@ -1,0 +1,181 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ID",
+    "desc": "节点的唯一标识"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "节点基本信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Name",
+    "desc": "节点的名称",
+    "isBase": true,
+    "required": true
+  },
+  {
+    "name": "任务类型",
+    "value": "结束事件",
+    "group": "节点基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Type",
+    "desc": "任务类型"
+  },
+  {
+    "name": "显示顺序",
+    "value": 1,
+    "group": "节点基本信息",
+    "editor": "numberbox",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ShowOrder",
+    "desc": "节点显示顺序"
+  },
+  {
+    "name": "记住上次人员",
+    "value": 0,
+    "group": "节点基本信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "IsRememberUser",
+    "desc": "记住上次人员：0，否；1，是;主要用于流程表单控件，发送后，将选择的人员信息保存到g_pnodes表 "
+  },
+  {
+    "name": "制度要求",
+    "value": {},
+    "group": "质量体系标准",
+    "nodeLevel": 1,
+    "nodeName": "InstitutionAndRiskInfoList",
+    "desc": "制度要求",
+    "type": "dialog",
+    "config": {
+      "content": "InstitutionInfo",
+      "width": "600px",
+      "height": "366px"
+    }
+  },
+  {
+    "name": "发送后",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onAfterSend",
+    "desc1": "事件",
+    "desc": "发送后",
+    "type": "dialog",
+    "config": {
+      "title": "发送后",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "强制办结",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onForceClose",
+    "desc1": "事件",
+    "desc": "强制办结",
+    "type": "dialog",
+    "config": {
+      "title": "强制办结",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "回收",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onRecovery",
+    "desc1": "事件",
+    "desc": "回收",
+    "type": "dialog",
+    "config": {
+      "title": "回收",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "强制回收",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onForceRecovery",
+    "desc1": "事件",
+    "desc": "强制回收",
+    "type": "dialog",
+    "config": {
+      "title": "强制回收",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting"
+    }
+  },
+  {
+    "name": "汇总开始节点",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherStartNode",
+    "desc": "选择汇总的开始节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总信息",
+      "width": "300px",
+      "height": "266px",
+      "content": "SumStartNode"
+    }
+  },
+  {
+    "name": "汇总范围",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherRule",
+    "desc": "选择汇总范围内的所有节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总范围",
+      "width": "360px",
+      "height": "356px",
+      "content": "SumAllNode"
+    }
+  }
+]

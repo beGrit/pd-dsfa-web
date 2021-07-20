@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="../css/css.css" rel="stylesheet" />
+    <!--<script type="text/javascript" src="../../scripts/jquery-2.0.0.min.js"></script>-->
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+<!--			      alert("scan ready");-->
+			  }
+
+   function activeEngine()
+        {
+        $arcsoftface.activeEngine('{"data":"这是传过来的json字符串"}',function(d){
+        alert(d)
+        },function(e){
+        alert(e)
+        })
+        }
+        function init() {
+            $arcsoftface.init('{"data":"这是退出"}');
+        }
+        function goRegisterAndRecognize()
+        {
+             $arcsoftface.goRegisterAndRecognize('{"data":"这是退出"}');
+        }
+        function closeRegisterAndRecognize()
+        {
+             $arcsoftface.closeRegisterAndRecognize('{"data":"这是退出"}');
+        }
+        function goHome()
+        {
+            window.location.href = "index.html";
+        }
+
+    </script>
+</head>
+<body>
+<div class="a-btn" onclick="activeEngine();">激活引擎</div>
+<br/>
+<div class="a-btn"  onclick="init();">初始化</div>
+<br/>
+<div class="a-btn" onclick="goRegisterAndRecognize();">去认证</div>
+<br/>
+<div class="a-btn" onclick="closeRegisterAndRecognize();">关闭认证页</div>
+<br/>
+<div class="a-btn" onclick="goHome();">返回</div>
+
+</body>
+</html>

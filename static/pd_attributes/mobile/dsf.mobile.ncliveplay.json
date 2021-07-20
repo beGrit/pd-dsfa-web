@@ -1,0 +1,34 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器宽度",
+      "showType": "text",
+      "bindControlAttr": "playerWidth",
+      "inCommonUse": true
+    },
+    {
+      "text": "播放器比例设置",
+      "showType": "text",
+      "bindControlAttr": "ratio",
+      "inCommonUse": true
+    },
+    {
+      "text": "接口地址(*注意:配置了此参数会调用详情接口)",
+      "bindControlAttr": "sourceUrl",
+      "showType": "text",
+      "inCommonUse": true
+    }
+  ]
+}]

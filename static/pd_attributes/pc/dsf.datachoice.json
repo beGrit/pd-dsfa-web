@@ -1,0 +1,314 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "label",
+        "showType": "text",
+        "inCommonUse": true,
+        "changeExecFunction": "renderContext"
+      },
+      {
+        "text": "名称是否显示",
+        "bindControlAttr": "showLabel",
+        "inCommonUse": true,
+        "showType": "boolean"
+      },
+      {
+        "text": "是否只读",
+        "showType": "boolean",
+        "inCommonUse": true,
+        "bindControlAttr": "readOnly"
+      },
+      {
+        "text": "是否失效",
+        "showType": "boolean",
+        "bindControlAttr": "disabled",
+        "inCommonUse": true,
+        "changeExecFunction": "renderContext"
+      },
+      {
+        "text": "是否可见",
+        "showType": "boolean",
+        "bindControlAttr": "visible",
+        "inCommonUse": true,
+        "changeExecFunction": "renderContext"
+      },
+      {
+        "text": "强制隐藏(不受visible影响)",
+        "bindControlAttr": "forceHidden",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "数量上限",
+        "bindControlAttr": "maxTags",
+        "showType": "number",
+        "inCommonUse": true,
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "name": "自动联想",
+    "attributes": [
+      {
+        "text": "开启自动联想功能",
+        "bindControlAttr": "autoComplete",
+        "showType": "boolean",
+        "inCommonUse": true,
+        "desc":"此大类以下属性设置只有在开启自动联想功能才生效"
+      },
+      {
+        "text": "数据源类型",
+        "bindControlAttr": "metaDataType",
+        "showType": "select",
+        "inCommonUse": true,
+        "showExpress": "1==2",
+        "dictionary": [
+          {
+            "text": "接口",
+            "value": "0"
+          },
+          {
+            "text": "元数据组",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "text": "元数据组选择",
+        "bindControlAttr": "chooseMetaData",
+        "showType": "dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "TreeDataSource",
+          "width": "1000px",
+          "buttonText": "选择",
+          "title": "请选择"
+        },
+        "showExpress": "@[metaDataType === '1']"
+      },
+      {
+        "text": "数据接口地址",
+        "showType": "text",
+        "inCommonUse": true,
+        "desc":"接口会自动跟上'q'参数名作为查询数据的key",
+        "bindControlAttr": "source",
+        "showExpress": "@[metaDataType === '0']"
+      },
+      {
+        "text": "发生击键和执行搜索之间的延迟（以毫秒为单位)",
+        "bindControlAttr": "delay",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "controls": false,
+          "min": 0,
+          "precision": 0
+        }
+      },
+      {
+        "text": "激活即列出输入建议",
+        "bindControlAttr": "triggerOnFocus",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "显示最大条目",
+        "bindControlAttr": "maxItemsNumber",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0,
+          "precision": 0
+        }
+      },
+      {
+        "text": "联想文本字段",
+        "bindControlAttr": "textKey",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "联想值字段",
+        "bindControlAttr": "valueKey",
+        "showType": "text",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "校验属性",
+    "attributes": [
+      {
+        "text": "必填标识",
+        "bindControlAttr": "required",
+        "showType": "boolean",
+        "inCommonUse": true,
+        "desc": "<p>当前组件名称前显示<span style='color:red'>*</span>号，但与实际逻辑上是否必填无关</p>"
+      },
+      {
+        "text": "校验规则",
+        "bindControlAttr": "metadata.validate",
+        "showType": "dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesValidateRule",
+          "width": "800px",
+          "height": "60vh",
+          "buttonText": "设置",
+          "title": "设置"
+        }
+      }
+    ]
+  },
+  {
+    "name": "元数据",
+    "attributes": [
+      {
+        "text": "默认值",
+        "bindControlAttr": "metadata.defaultValue",
+        "showType": "dialog",
+        "inCommonUse": true,
+        "config": {
+          "width": "50vw",
+          "height": "50vh",
+          "content": "DesDefaultValue"
+        },
+        "desc": "<p>当前组件在页面中初始化后显示的值，可支持@[xxxx]形式的表达式</p>"
+      },
+      {
+        "text": "值属性设置",
+        "bindControlAttr": "metadata.valueAttributes",
+        "showType": "dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesValueAttributes",
+          "width": "50vw",
+          "height": "50vh",
+          "buttonText": "设置",
+          "title": "设置"
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "弹出窗口地址",
+        "inCommonUse": true,
+        "bindControlAttr": "dialogUrl",
+        "showType": "text"
+      },
+      {
+        "text": "弹出窗口标题",
+        "inCommonUse": true,
+        "bindControlAttr": "dialogTitle",
+        "showType": "text"
+      },
+      {
+        "text": "弹出窗口宽度",
+        "inCommonUse": true,
+        "bindControlAttr": "dialogWidth",
+        "showType": "text"
+      },
+      {
+        "text": "弹出窗口高度",
+        "inCommonUse": true,
+        "bindControlAttr": "dialogHeight",
+        "showType": "text"
+      },
+      {
+        "text": "显示文本对应字段",
+        "bindControlAttr": "dialogTextKey",
+        "showType": "text",
+        "inCommonUse": true,
+        "desc":"支持只写入字段名以点分割后的最后一位"
+      },
+      {
+        "text": "显示值对应字段",
+        "bindControlAttr": "dialogValueKey",
+        "showType": "text",
+        "inCommonUse": true,
+        "desc":"支持只写入字段名以点分割后的最后一位"
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "是否可以提交",
+        "bindControlAttr": "allowPost",
+        "showType": "boolean"
+      },
+      {
+        "text": "只读状态简版(表格中有效)",
+        "showType": "boolean",
+        "bindControlAttr": "simple",
+        "desc": "<p>简化组件只读状态的dom元素<p>"
+      },
+      {
+        "text": "启用文本代理输出",
+        "showType": "boolean",
+        "bindControlAttr": "textProxy",
+        "desc": "<p>只生成&lt;span&gt;标签,不实例化组件，开启后可提高列表的性能但会失去所组件特性<p>"
+      },
+      {
+        "text": "只读及文本代理状态下格式化",
+        "showType": "select",
+        "bindControlAttr": "formatter",
+        "desc": "<p>只读状态下格式化<p>",
+        "dictionary": [
+          {
+            "text": "显示文本",
+            "value": "textValue^text"
+          },
+          {
+            "text": "显示值",
+            "value": "textValue^value"
+          }
+        ]
+      },
+      {
+        "text": "文本代理输出时的icon",
+        "showType": "text",
+        "bindControlAttr": "textProxyIcon",
+        "showExpress": "@[textProxy]==true",
+        "desc": "<p>使用文本代理时的前置图标<p>"
+      },
+      {
+        "text": "描述文字",
+        "showType": "text",
+        "bindControlAttr": "dataCapion",
+        "desc": "<p>移动端运行该组件时会在名称后追加一段备注文字。</p><p>因布局上的问题PC端赞不支持</p>"
+      },
+      {
+        "text": "语音地址",
+        "showType": "text",
+        "bindControlAttr": "dataAudioUrl",
+        "desc": "<p>移动端运行该组件时会在名称后追加一个图标，点击后播放MP3。</p><p>因布局上的问题PC端赞不支持</p>"
+      },
+      {
+        "text": "视频地址",
+        "showType": "text",
+        "bindControlAttr": "dataVideoUrl",
+        "desc": "<p>移动端运行该组件时会在名称后追加一个图标，点击后播放MP4。</p><p>因布局上的问题PC端赞不支持<p>"
+      }
+    ]
+  }
+]

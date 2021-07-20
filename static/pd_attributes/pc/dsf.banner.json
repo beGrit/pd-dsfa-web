@@ -1,0 +1,229 @@
+[{
+    "name": "基础属性",
+    "attributes": [{
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "inCommonUse": true,
+        "showType": "text"
+      },
+      {
+        "text": "横幅配置",
+        "bindControlAttr": "",
+        "showType": "dialog",
+        "inCommonUse": true,
+        "config": {
+          "width": "1200px",
+          "height": "60vh",
+          "content": "DesMobileBannerEdit",
+          "type": "app"
+        }
+      },
+      {
+        "text": "高度/比例",
+        "bindControlAttr": "ratio",
+        "showType": "text",
+        "inCommonUse": true,
+        "desc": "比例格式：(宽)数字/(高)数字，例：1920/460"
+      },
+      {
+        "text": "图片圆角",
+        "bindControlAttr": "borderRadius",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "切换箭头的显示时机",
+        "bindControlAttr": "showButton",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "总是显示",
+            "value": "always"
+          },
+          {
+            "text": "鼠标移入显示",
+            "value": "hover"
+          },
+          {
+            "text": "从不显示",
+            "value": "never"
+          }
+        ]
+      },
+      {
+        "text": "指示器的位置",
+        "bindControlAttr": "showIndicators",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "显示——在内部",
+            "value": "inside"
+          },
+          {
+            "text": "显示——在外部",
+            "value": "outside"
+          },
+          {
+            "text": "不显示",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "text": "指示器的触发方式",
+        "bindControlAttr": "indicatorTrigger",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "鼠标移入",
+            "value": "hover"
+          },
+          {
+            "text": "点击",
+            "value": "click"
+          }
+        ]
+      },
+      {
+        "text": "指示器高亮颜色",
+        "showType": "text",
+        "inCommonUse": true,
+        "bindControlAttr": "indicatorColor",
+        "showExpress": "@[showIndicators]!='none'",
+        "desc":"空时为白色，'theme'为主题色"
+      },
+      {
+        "text": "指示器默认颜色",
+        "showType": "text",
+        "inCommonUse": true,
+        "bindControlAttr": "indicatorDefaultColor",
+        "showExpress": "@[showIndicators]!='none'",
+        "desc":"为空时则为高亮颜色的48%透明度"
+      },
+      {
+        "text": "指示器的高",
+        "showType": "number",
+        "inCommonUse": true,
+        "bindControlAttr": "indicatorHeight",
+        "showExpress": "@[showIndicators]!='none'"
+      },
+      {
+        "text": "指示器的宽",
+        "showType": "number",
+        "inCommonUse": true,
+        "bindControlAttr": "indicatorWidth",
+        "showExpress": "@[showIndicators]!='none'"
+      },
+      {
+        "text": "指示器的圆角",
+        "showType": "text",
+        "inCommonUse": true,
+        "bindControlAttr": "indicatorRadius",
+        "showExpress": "@[showIndicators]!='none'"
+      },
+      {
+        "text": "垂直滚动",
+        "showType": "boolean",
+        "inCommonUse": true,
+        "bindControlAttr": "vertical"
+      },
+      {
+        "text": "自动播放",
+        "showType": "boolean",
+        "inCommonUse": true,
+        "bindControlAttr": "isAutoPlay"
+      },
+      {
+        "text": "自动播放间隔",
+        "showType": "number",
+        "inCommonUse": true,
+        "bindControlAttr": "autoPlay",
+        "showExpress": "@[isAutoPlay]==true"
+      },
+      {
+        "text": "循环播放",
+        "showType": "number",
+        "inCommonUse": true,
+        "bindControlAttr": "loop"
+      },
+      {
+        "text": "轮播类型",
+        "bindControlAttr": "type",
+        "showType": "select",
+        "inCommonUse": true,
+        "dictionary": [
+          {
+            "text": "一般模式",
+            "value": "normal"
+          },
+          {
+            "text": "卡片模式",
+            "value": "card"
+          }
+        ]
+      },
+      {
+        "text": "数据条数限制",
+        "bindControlAttr": "max",
+        "showType": "number",
+        "inCommonUse": true,
+        "config": {
+          "min": 10,
+          "precision": 0
+        }
+      },
+      {
+        "text": "点击跳转地址",
+        "bindControlAttr": "toUrl",
+        "inCommonUse": true,
+        "showType": "text"
+      }
+    ]
+  },
+  {
+    "name": "字段设置",
+    "attributes": [
+      {
+        "text": "图片字段",
+        "bindControlAttr": "imageKeyName",
+        "inCommonUse": true,
+        "showType": "text"
+      },
+      {
+        "text": "标题字段",
+        "bindControlAttr": "titleKeyName",
+        "inCommonUse": true,
+        "showType": "text"
+      },
+      {
+        "text": "描述字段",
+        "bindControlAttr": "descKeyName",
+        "inCommonUse": true,
+        "showType": "text"
+      },
+      {
+        "text": "跳转方式字段",
+        "bindControlAttr": "jumpWayKeyName",
+        "inCommonUse": true,
+        "showType": "text"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [{
+      "text": "动态属性绑定",
+      "bindControlAttr": "development",
+      "showType": "dialog",
+      "inCommonUse": true,
+      "config": {
+        "content": "DesDevelopment",
+        "width": "1000px",
+        "height": "60vh"
+      }
+    }]
+  }
+]

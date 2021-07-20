@@ -1,0 +1,102 @@
+[{
+  "name": "基础属性",
+  "attributes": [{
+      "text": "组件标识",
+      "bindControlAttr": "caption",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "模块宽度",
+      "bindControlAttr": "itemWidth",
+      "showType": "text",
+      "inCommonUse": true
+    },
+    {
+      "text": "模块边距",
+      "bindControlAttr": "margin",
+      "showType": "multipleText",
+      "config": {
+        "inputs": [
+          {
+            "placeholder": "上"
+          },
+          {
+            "placeholder": "右"
+          },
+          {
+            "placeholder": "下"
+          },
+          {
+            "placeholder": "左"
+          }
+        ]
+      },
+      "inCommonUse": true
+    },
+    {
+      "text": "数据来源",
+      "bindControlAttr": "dataSource",
+      "showType": "select",
+      "inCommonUse": true,
+      "dictionary": [
+        {
+          "text": "请求",
+          "value": "http"
+        },
+        {
+          "text": "配置",
+          "value": "json"
+        }
+      ]
+    },
+    {
+      "text": "数据请求地址",
+      "bindControlAttr": "dataSourceUrl",
+      "showType": "text",
+      "showExpress": "@[dataSource] == 'http'",
+      "inCommonUse": true
+    },
+    {
+      "text": "字段映射",
+      "bindControlAttr": "keysMap",
+      "showType": "dialog",
+      "showExpress": "@[dataSource] == 'http'",
+      "inCommonUse": true,
+      "config": {
+        "title": "字段映射",
+        "content": "DesKeysMapSetting",
+        "width": "1100px",
+        "height": "60vh"
+      }
+    },
+    {
+      "text": "数据配置",
+      "bindControlAttr": "dataSourceList",
+      "showType": "dialog",
+      "showExpress": "@[dataSource] == 'json'",
+      "config": {
+        "content": "DesMobileNavMenuData",
+        "width": "1200px",
+        "height": "60vh"
+      },
+      "inCommonUse": true
+    },
+    {
+      "text": "一行几列",
+      "bindControlAttr": "colNum",
+      "showType": "number",
+      "inCommonUse": true,
+      "config": {
+        "min": 1,
+        "precision": 0
+      }
+    },
+    {
+      "text": "是否可见",
+      "showType": "boolean",
+      "bindControlAttr": "visible",
+      "inCommonUse": true
+    }
+  ]
+}]

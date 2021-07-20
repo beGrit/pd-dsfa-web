@@ -1,0 +1,34 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text"
+      },
+      {
+        "text": "内容",
+        "showType": "dialog",
+        "bindControlAttr": "html",
+        "config": {
+          "width": "1000px",
+          "height": "60vh",
+          "overflow": "hidden",
+          "content": "DesCodeEdit",
+          "language": "html"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

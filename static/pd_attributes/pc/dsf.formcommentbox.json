@@ -1,0 +1,148 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "label",
+        "showType": "text",
+        "changeExecFunction": "renderContext",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称是否显示",
+        "bindControlAttr": "showLabel",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "是否可见",
+        "showType": "boolean",
+        "bindControlAttr": "visible",
+        "inCommonUse": true
+      },
+      {
+        "text": "强制隐藏(不受visible影响)",
+        "bindControlAttr": "forceHidden",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "取消上下边距",
+        "bindControlAttr": "tbNoPadding",
+        "showType": "boolean"
+      },
+      {
+        "text": "取消左右边距",
+        "bindControlAttr": "lrNoPadding",
+        "showType": "boolean"
+      },
+      {
+        "text": "是否显示填写处理意见",
+        "bindControlAttr": "showAddComment",
+        "showType": "boolean",
+        "inCommonUse": true
+      },
+      {
+        "text": "填写处理意见",
+        "bindControlAttr": "addCommentText",
+        "showType": "text",
+        "showExpress": "@[showAddComment==true]",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "显示",
+        "showType": "select",
+        "bindControlAttr": "scope",
+        "dictionary": [
+          {
+            "text": "按节点",
+            "value": 0
+          },
+          {
+            "text": "按部门",
+            "value": 1
+          },
+          {
+            "text": "按角色",
+            "value": 2
+          },
+          {
+            "text": "按岗位",
+            "value": 3
+          },
+          {
+            "text": "按人",
+            "value": 4
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "节点",
+        "showType": "checkbox",
+        "bindControlAttr": "nodes",
+        "dictionaryControl": true,
+        "oldFlow": null,
+        "dictionary": [],
+        "inCommonUse": true
+      },
+      {
+        "text": "排序",
+        "showType": "select",
+        "bindControlAttr": "order",
+        "dictionary": [
+          {
+            "text": "按时间正排",
+            "value": 0
+          },
+          {
+            "text": "按时间倒排",
+            "value": 1
+          },
+          {
+            "text": "按处理人正排",
+            "value": 2
+          },
+          {
+            "text": "按处理人倒排",
+            "value": 3
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "展示模板",
+        "showType": "select",
+        "bindControlAttr": "template",
+        "dictionary": [
+          {
+            "text": "标准一",
+            "value": 0
+          }
+        ]
+      }
+    ]
+  }
+]

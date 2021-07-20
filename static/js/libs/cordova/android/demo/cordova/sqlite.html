@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("sqlite ready！");
+			  }
+			  
+			  function query(){
+				   var db = $SQLite.openDatabase("database.sqlite", "1.0", "Demo", -1);
+                   db.transaction(function(tx) {
+                         tx.executeSql('DROP TABLE IF EXISTS test_table');
+                         tx.executeSql('CREATE TABLE IF NOT EXISTS test_table (id integer primary key, data text, data_num integer)');
+                         tx.executeSql("INSERT INTO test_table (data, data_num) VALUES (?,?)", ["test", 100], function(tx, res) {
+                         tx.executeSql("select * from test_table", [], function(tx, res) {
+                            callback(tx,res);
+                         });
+                     }, function(e) {
+                       alert("ERROR: " + e.message);
+                     });
+                   });
+			  }
+
+			  function callback(tx,res){
+			       window.setTimeout(function(){
+			             var row=res.rows.item(0);
+                         for(var j in row){
+                            document.write(j+"="+row[j]+"<br />");
+                         }
+			       },1);
+			  }
+		</script>
+    </head>
+    <body>
+       <button onclick="query();">查询</button>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="file:///android_asset/www/cordova/cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+			  function showMsg(){
+			     $CordovaToast.show("土司测试");
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="showMsg();">土司测试</button>
+    </body>
+</html>

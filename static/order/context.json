@@ -1,0 +1,206 @@
+{
+  "Context": [
+    {
+      "label": "流程信息",
+      "Key": "Process",
+      "children": [
+        {
+          "label": "流转对象ID",
+          "Key": "Process.ObjectID"
+        },
+        {
+          "label": "流转对象名称",
+          "Key": "Process.ObjectName"
+        },
+        {
+          "label": "流程ID",
+          "Key": "Process.ID"
+        },
+        {
+          "label": "创建时间",
+          "Key": "Process.CreateTime"
+        },
+        {
+          "label": "办理期限",
+          "Key": "Process.Deadline"
+        },
+        {
+          "label": "流转状态",
+          "Key": "Process.Status"
+        },
+        {
+          "label": "发起用户",
+          "Key": "Process.CreateUser",
+          "children": [
+            {
+              "label": "用户ID",
+              "Key": "Process.CreateUser.UserID"
+            },
+            {
+              "label": "用户姓名",
+              "Key": "Process.CreateUser.UserName"
+            },
+            {
+              "label": "部门ID",
+              "Key": "Process.CreateUser.DeptID"
+            },
+            {
+              "label": "部门名称",
+              "Key": "Process.CreateUser.DeptName"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "流程模板",
+      "Key": "WF",
+      "children": [
+        {
+          "label": "流程模板ID",
+          "Key": "WF.ID"
+        },
+        {
+          "label": "流程名称",
+          "Key": "WF.Name"
+        },
+        {
+          "label": "流程版本",
+          "Key": "WF.Version"
+        }
+      ]
+    },
+    {
+      "label": "当前环节",
+      "Key": "CurLink",
+      "children": [
+        {
+          "label": "环节ID",
+          "Key": "CurLink.ID"
+        },
+        {
+          "label": "流转状态",
+          "Key": "CurLink.Status"
+        },
+        {
+          "label": "送达时间",
+          "Key": "CurLink.ReachTime"
+        },
+        {
+          "label": "签收时间",
+          "Key": "CurLink.ReceiveTime"
+        },
+        {
+          "label": "处理时间",
+          "Key": "CurLink.HandleTime"
+        },
+        {
+          "label": "办理期限",
+          "Key": "CurLink.Deadline"
+        }
+      ]
+    },
+    {
+      "label": "当前节点",
+      "Key": "CurNode",
+      "children": [
+        {
+          "label": "节点ID",
+          "Key": "CurNode.ID"
+        },
+        {
+          "label": "节点名称",
+          "Key": "CurNode.Name"
+        },
+        {
+          "label": "节点类型",
+          "Key": "CurNode.Type"
+        }
+      ]
+    },
+    {
+      "label": "当前用户",
+      "Key": "CurUser",
+      "children": [
+        {
+          "label": "用户ID",
+          "Key": "CurUser.ID"
+        },
+        {
+          "label": "用户姓名",
+          "Key": "CurUser.Name"
+        },
+        {
+          "label": "验证用户权限",
+          "Key": "CurUser.checkPrivilege(sPriID)"
+        },
+        {
+          "label": "验证用户部门角色",
+          "Key": "CurUser.checkRole((sDeptID,sRoleID)"
+        },
+        {
+          "label": "验证用户角色",
+          "Key": "CurUser.checkRole(sRoleID)"
+        },
+        {
+          "label": "判断用户岗位",
+          "Key": "CurUser.checkJob(sJobID)"
+        },
+        {
+          "label": "验证用户关系",
+          "Key": "CurUser.checkRelation(sUserID,sRelationID)"
+        },
+        {
+          "label": "获取用户属性",
+          "Key": "CurUser.getAtt(sKey)"
+        },
+        {
+          "label": "获取用户数值属性",
+          "Key": "CurUser.getIntAtt(sKey)"
+        },
+        {
+          "label": "获取用户布尔值属性",
+          "Key": "CurUser.getBooleanAtt(sKey)"
+        }
+      ]
+    },
+    {
+      "label": "当前部门",
+      "Key": "CurDept",
+      "children": [
+        {
+          "label": "部门ID",
+          "Key": "CurDept.ID"
+        },
+        {
+          "label": "部门名称",
+          "Key": "CurDept.Name"
+        },
+        {
+          "label": "级别",
+          "Key": "CurDept.Level"
+        },
+        {
+          "label": "子机构ID",
+          "Key": "CurDept.GID"
+        },
+        {
+          "label": "获取部门属性",
+          "Key": "CurDept.getAtt(sKey)"
+        },
+        {
+          "label": "获取部门数值属性",
+          "Key": "CurDept.getIntAtt(sKey)"
+        },
+        {
+          "label": "获取部门布尔值属性",
+          "Key": "CurDept.getBooleanAtt(sKey)"
+        }
+      ]
+    },
+    {
+      "label": "发送结果",
+      "Key": "Result"
+    }
+  ]
+}

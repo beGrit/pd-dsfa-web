@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/cordova/android/cordova.js"></script>
+    <script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("ready");
+			  }
+
+			  function getNetType(){
+                _DsfNet.getMobileNetType({},function(result){
+                        var netType = result['netType'];
+			            alert(netType);
+			      },function(e){
+			            alert(e);
+			      });
+			  }
+
+    </script>
+</head>
+<body>
+<br><br>
+<button onclick="getNetType();">获取网络类型</button>
+</body>
+</html>

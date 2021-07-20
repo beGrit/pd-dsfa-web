@@ -1,0 +1,91 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "config": {
+          "disabled": true
+        }
+      },
+      {
+        "text": "获取父节点控件名称",
+        "bindControlAttr": "pidExpress",
+        "showType": "text"
+      },
+      {
+        "text": "获取节点图片控件名称",
+        "bindControlAttr": "iconExpress",
+        "showType": "text"
+      },
+      {
+        "text": "图标",
+        "bindControlAttr": "iconMap",
+        "showType": "dialog",
+        "config": {
+          "content": "DesTreeImgSet",
+          "width": "600px",
+          "height": "60vh",
+          "buttonText": "设置",
+          "title": "图标"
+        }
+      }
+    ]
+  },
+  {
+    "name": "元数据",
+    "attributes": [
+      {
+        "text": "默认值",
+        "bindControlAttr": "metadata.defaultValue",
+        "showType": "dialog",
+        "config": {
+          "width": "50vw",
+          "height": "50vh",
+          "content": "DesDefaultValue"
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "是否可以提交",
+        "bindControlAttr": "allowPost",
+        "showType": "boolean"
+      },
+      {
+        "text": "只读状态简版(表格中有效)",
+        "showType": "boolean",
+        "bindControlAttr": "simple",
+        "desc": "<p>简化组件只读状态的dom元素<p>"
+      },
+      {
+        "text": "启用文本代理输出",
+        "showType": "boolean",
+        "bindControlAttr": "textProxy",
+        "desc": "<p>只生成&lt;span&gt;标签,不实例化组件，开启后可提高列表的性能但会失去所组件特性<p>"
+      },
+      {
+        "text": "文本代理输出时的icon",
+        "showType": "text",
+        "bindControlAttr": "textProxyIcon",
+        "showExpress": "@[textProxy]==true",
+        "desc": "<p>使用文本代理时的前置图标<p>"
+      }
+    ]
+  }
+]

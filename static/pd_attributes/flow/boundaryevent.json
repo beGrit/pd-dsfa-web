@@ -1,0 +1,31 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "hide": true,
+    "group": "基本信息",
+    "nodeLevel": 1,
+    "nodeName": "ID",
+    "desc": "标示"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "基本信息",
+    "editor": "text",
+    "nodeLevel": 1,
+    "nodeName": "Name",
+    "desc": "名称",
+    "isBase": true
+  },
+  {
+    "name": "描述",
+    "value": "",
+    "group": "基本信息",
+    "editor": "text",
+    "nodeLevel": 1,
+    "nodeName": "Desc",
+    "desc": "描述",
+    "isBase": true
+  }
+]

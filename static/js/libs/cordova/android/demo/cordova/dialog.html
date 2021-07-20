@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("dialog ready");
+			  }
+			  
+			  function myAlert(){
+			      dsm.alert("我的弹框",function(){
+			          alert("确定");
+			      },"我的title","我的按钮");
+			  }
+			  
+			  function myConfirm(){
+			      $Dialogs.confirm("我的弹框",function(result){
+			          alert("结果["+JSON.stringify(result)+"]");
+			      },"我的title",["我的确定","我的取消"]);
+			  }
+			  function progressStart(){
+			  		$Dialogs.progressStart("我的title","我的消息");
+			  		progressValue();
+			  }
+			  
+			  function progressValue(){
+			       var i =0;
+			       var inter = window.setInterval(function(){
+				       if(i==100){
+				          progressStop();
+				          clearInterval(inter);
+				       }else{
+				     	  $Dialogs.progressValue(++i);
+				       }
+			       },100);
+			  		
+			  }
+			  
+			  function progressStop(){
+			  		$Dialogs.progressStop();
+			  }
+			  function activityStart(){
+			      $Dialogs.activityStart("我的标题","我的消息");
+			  }
+			  
+			   function activityStop(){
+			      $Dialogs.activityStop();
+			  }
+			  
+		</script>
+    </head>
+    <body>
+        <button onclick="myAlert();">alert</button><br/>
+        <button onclick="myConfirm();">confirm</button><br/>
+         <button onclick="progressStart();">progressStart</button><br/>
+         <button onclick="activityStart();">activityStart</button><br/>
+    </body>
+</html>

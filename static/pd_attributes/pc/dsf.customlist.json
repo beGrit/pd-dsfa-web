@@ -1,0 +1,84 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text"
+      },
+      {
+        "text": "显示列表行下边框",
+        "showType": "boolean",
+        "bindControlAttr": "liBorder"
+      },
+      {
+        "text": "显示列表行小圆点",
+        "showType": "boolean",
+        "bindControlAttr": "listStyle"
+      },
+      {
+        "text": "列表行间距",
+        "desc": "",
+        "bindControlAttr": "lineHeight",
+        "showType": "select",
+        "dictionary": [
+          {
+            "text": "小",
+            "value": "small"
+          },
+          {
+            "text": "中",
+            "value": "medium"
+          },
+          {
+            "text": "大",
+            "value": "big"
+          }
+        ]
+      },
+      {
+        "text": "组件背景色",
+        "showType": "text",
+        "bindControlAttr": "bgColor"
+      }
+    ]
+  },
+  {
+    "name": "数据设置",
+    "attributes": [
+      {
+        "text": "接口地址",
+        "bindControlAttr": "url",
+        "showType": "text"
+      },
+      {
+        "text": "设置列表行",
+        "bindControlAttr": "formInline",
+        "showType": "dialog",
+        "config": {
+          "content": "DesCustomListSetList",
+          "width": "60vw",
+          "height": "50vh",
+          "buttonText": "设置",
+          "title": "自定义列表行设置"
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

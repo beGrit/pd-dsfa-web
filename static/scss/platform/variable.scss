@@ -1,0 +1,43 @@
+//表单组件label默认宽度
+$fontFamily: "Helvetica", "Microsoft YaHei", \5fae\8f6f\96c5\9ed1;
+//PC端默认字体颜色
+$fontColorForPc: #606266;
+//移动端默认字体颜色
+$fontColorForMobile: #606266;
+
+// 平台默认边距
+$padding_1: 24px;
+$padding_2: 12px;
+$padding_3: 6px;
+$padding_4: 3px;
+
+//网页安全黑色
+$blackColor: #333333;
+
+//通用边框色
+$borderColor: #e6e6e6;
+
+// 标题默认间距
+$titlePadding: 15px;
+// 表格标题字体大小
+$formTitleFontSize: 26px;
+// 表格标题默认颜色
+$formTitleColor: #666;
+
+//列表组件背景色
+$gridHeadColor: #f9f9f9;
+//页面BODY背景色
+$backgroundColor: #f4f4f4;
+
+//表格组件边框色
+$tableBorder: 1px solid $borderColor;
+//页面片段组件阴影大小
+$sectionShadow: 3px;
+//表单组件默认边框色
+$formBorder: #dcdfe6;
+//表单验证错误提示颜色
+$formErrorColor: #f56c6c;
+//表单组件label默认宽度
+$formLableWidth: 120px;
+//表单组件聚焦后的边框色
+$fouceBorderColor: #c9c9c9;

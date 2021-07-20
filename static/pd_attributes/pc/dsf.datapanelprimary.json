@@ -1,0 +1,90 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "text",
+        "config": {
+          "disabled": true
+        }
+      },
+      {
+        "text": "图标",
+        "bindControlAttr": "iconName",
+        "showType": "text"
+      },
+      {
+        "text": "标题",
+        "bindControlAttr": "title",
+        "showType": "text"
+      },
+      {
+        "text": "数据",
+        "bindControlAttr": "number",
+        "showType": "text"
+      },
+      {
+        "text": "描述",
+        "bindControlAttr": "desc",
+        "showType": "text"
+      },
+      {
+        "text": "跳转路径",
+        "bindControlAttr": "toUrl",
+        "showType": "text"
+      },
+      {
+        "text": "获取数据接口",
+        "bindControlAttr": "dataUrl",
+        "showType": "text"
+      },
+      {
+        "text": "高度",
+        "bindControlAttr": "height",
+        "showType": "text"
+      }
+    ]
+  },
+  {
+    "name": "更多",
+    "attributes": [
+      {
+        "text": "背景颜色",
+        "bindControlAttr": "backgroundColor",
+        "showType": "text"
+      },
+      {
+        "text": "显示阴影",
+        "bindControlAttr": "showShadow",
+        "showType": "boolean"
+      },
+      {
+        "text": "显示图标",
+        "bindControlAttr": "showIcon",
+        "showType": "boolean"
+      },
+      {
+        "text": "图标颜色",
+        "bindControlAttr": "iconColor",
+        "showType": "text"
+      },
+      {
+        "text": "图标背景色",
+        "bindControlAttr": "iconBackgroundColor",
+        "showType": "text"
+      },
+      {
+        "text": "显示标题",
+        "bindControlAttr": "showTitle",
+        "showType": "boolean"
+      },
+      {
+        "text": "显示描述",
+        "bindControlAttr": "showDesc",
+        "showType": "boolean"
+      }
+    ]
+  }
+]

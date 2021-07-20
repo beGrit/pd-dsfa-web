@@ -1,0 +1,366 @@
+[
+  {
+    "name": "标识",
+    "value": "",
+    "group": "连线基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "ID",
+    "desc": "节点的唯一标识"
+  },
+  {
+    "name": "名称",
+    "value": "",
+    "group": "连线基本信息",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Name",
+    "desc": "节点的名称",
+    "isBase": true,
+    "required": true
+  },
+  {
+    "name": "连线类型",
+    "value": 0,
+    "group": "连线基本信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "一般线"
+          },
+          {
+            "value": 1,
+            "text": "汇总线"
+          },
+          {
+            "value": 2,
+            "text": "退回线"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "Type",
+    "desc": "连线类型,0:一般线，1：汇总线，2：退回线",
+    "showRob": "GatherRule",
+    "isBase": true
+  },
+  {
+    "name": "线型",
+    "value": "multi",
+    "group": "连线基本信息",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": "multi",
+            "text": "曲线"
+          },
+          {
+            "value": "single",
+            "text": "直线"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "LineShape",
+    "desc": "一段线、多段线",
+    "isBase": true
+  },
+  {
+    "name": "连线方式",
+    "value": "",
+    "group": "连线基本信息",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": "",
+            "text": "直线"
+          },
+          {
+            "value": "-",
+            "text": "虚线"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "strokeDasharray",
+    "desc": "画线方式，0：直线，1：虚线",
+    "isBase": true
+  },
+  {
+    "name": "汇总信息",
+    "value": "",
+    "group": "连线基本信息",
+    "nodeLevel": 2,
+    "nodeName1": "BaseInfo",
+    "nodeName2": "GatherRule",
+    "desc": "汇总，当连线类型为汇总线时有效",
+    "type": "dialog",
+    "config": {
+      "width": "300px",
+      "height": "260px",
+      "content": "Summary"
+    },
+    "isBase": true,
+    "hide": true
+  },
+  {
+    "name": "是否启用",
+    "value": 0,
+    "group": "发送参数",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "否"
+          },
+          {
+            "value": 1,
+            "text": "是"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "IsEnabled",
+    "desc1": "发送参数，是否启用发线信息",
+    "desc": "是否启用，0：否，1：是"
+  },
+  {
+    "name": "处理模式",
+    "value": 0,
+    "group": "发送参数",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "单人办理"
+          },
+          {
+            "value": 1,
+            "text": "会签（多人同时处理）"
+          },
+          {
+            "value": 2,
+            "text": "多人依次处理"
+          },
+          {
+            "value": 3,
+            "text": "抄送（需提交）"
+          },
+          {
+            "value": 4,
+            "text": "抄送（不需提交）"
+          },
+          {
+            "value": 5,
+            "text": "抢办（按人数）"
+          },
+          {
+            "value": 6,
+            "text": "抢办（按比例）"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "Type",
+    "desc1": "发送参数",
+    "desc": "处理模式:0：单人办理，1:会签（多人同时处理），2:多人依次处理，3:抄送（需提交），4:抄送（不需提交），5:抢办（按人数），6:抢办（按比例）",
+    "showRob": "RushInfo"
+  },
+  {
+    "name": "人数",
+    "value": "1",
+    "group": "发送参数",
+    "editor": "text",
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "RushInfo",
+    "desc": "抢办人数",
+    "hide": true,
+    "unit": "（人）",
+    "max": 999999
+  },
+  {
+    "name": "处理范围",
+    "value": "",
+    "group": "发送参数",
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "RangeRule",
+    "desc": "处理范围",
+    "type": "dialog",
+    "config": {
+      "content": "RangeRule",
+      "width": "1100px",
+      "height": "552px"
+    }
+  },
+  {
+    "name": "展开层级",
+    "value": 0,
+    "group": "发送参数",
+    "editor": {
+      "type": "combobox",
+      "options": {
+        "data": [
+          {
+            "value": -1,
+            "text": "全部展开"
+          },
+          {
+            "value": 0,
+            "text": "不展开"
+          },
+          {
+            "value": 1,
+            "text": "一级"
+          },
+          {
+            "value": 2,
+            "text": "两级"
+          },
+          {
+            "value": 3,
+            "text": "三级"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "ExpandLevel",
+    "desc1": "入线信息",
+    "desc": "展开层级:-1： 全部展开， 0：不展开，1:一级，2:两级，3:三级"
+  },
+  {
+    "name": "继承节点经办人",
+    "value": 1,
+    "group": "发送参数",
+    "editor": {
+      "type": "radio",
+      "options": {
+        "data": [
+          {
+            "value": 0,
+            "text": "开始节点"
+          },
+          {
+            "value": 1,
+            "text": "一般节点"
+          },
+          {
+            "value": 2,
+            "text": "结束节点"
+          },
+          {
+            "value": 3,
+            "text": "跳转节点"
+          },
+          {
+            "value": 4,
+            "text": "子流程"
+          },
+          {
+            "value": 5,
+            "text": "自动流"
+          },
+          {
+            "value": 6,
+            "text": "判断节点"
+          }
+        ]
+      }
+    },
+    "nodeLevel": 2,
+    "nodeName1": "SendParameter",
+    "nodeName2": "IsInherit",
+    "desc1": "发送参数",
+    "desc": "继承节点经办人: 0：不继承，1：继承"
+  },
+  {
+    "name": "发送后",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onAfterSend",
+    "desc1": "事件",
+    "desc": "发送后",
+    "type": "dialog",
+    "config": {
+      "title": "发送后",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting",
+      "language": "java"
+    }
+  },
+  {
+    "name": "增发",
+    "value": "",
+    "group": "事件",
+    "nodeLevel": 2,
+    "nodeName1": "Event",
+    "nodeName2": "onExSend",
+    "desc1": "事件",
+    "desc": "增发",
+    "type": "dialog",
+    "config": {
+      "title": "增发",
+      "width": "1000px",
+      "height": "600px",
+      "content": "EventSetting"
+    }
+  },
+  {
+    "name": "汇总开始节点",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherStartNode",
+    "desc": "选择汇总的开始节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总信息",
+      "width": "300px",
+      "height": "266px",
+      "content": "SumStartNode"
+    }
+  },
+  {
+    "name": "汇总范围",
+    "value": "",
+    "group": "汇总信息",
+    "nodeLevel": 1,
+    "nodeName": "GatherRule",
+    "desc": "选择汇总范围内的所有节点",
+    "type": "dialog",
+    "config": {
+      "title": "汇总范围",
+      "width": "360px",
+      "height": "356px",
+      "content": "SumAllNode"
+    }
+  }
+]

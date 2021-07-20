@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="../scripts/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+		<script>
+			  document.addEventListener('deviceready',onDeviceReady, false);
+			  function onDeviceReady(){
+			      alert("scan ready");
+			  }
+			  
+			  function scan(){
+			      $Barcode.scan(function(result){
+			          alert("result:["+JSON.stringify(result)+"]");
+			      },function(error){
+			          alert("error:["+error+"]");
+			      });
+			  }
+			  
+			  function createTextScan(){
+			      $Barcode.encode(
+				      "TEXT_TYPE", 
+				      "http://www.baidu.com", 
+				      function(success) {
+				        alert("encode success: " + success);
+				      }, function(fail) {
+				        alert("encoding failed: " + fail);
+				      }
+				    );
+			  }
+			   function createEmailScan(){
+			      $Barcode.encode(
+				      "EMAIL_TYPE", 
+				      "wenjin1204@163.com", 
+				      function(success) {
+				        alert("encode success: " + success);
+				      }, function(fail) {
+				        alert("encoding failed: " + fail);
+				      }
+				    );
+			  }
+			   function createPhoneScan(){
+			      $Barcode.encode(
+				      "PHONE_TYPE", 
+				      "15021672934", 
+				      function(success) {
+				        alert("encode success: " + success);
+				      }, function(fail) {
+				        alert("encoding failed: " + fail);
+				      }
+				    );
+			  }
+			   function createSmsScan(){
+			      $Barcode.encode(
+				      "SMS_TYPE", 
+				      "给谁发送短信", 
+				      function(success) {
+				        alert("encode success: " + success);
+				      }, function(fail) {
+				        alert("encoding failed: " + fail);
+				      }
+				    );
+			  }
+		</script>
+    </head>
+    <body>
+         <button onclick="scan();">二维码扫描</button>
+         <br/>
+         <button onclick="createTextScan();">生成二维码(TEXT_TYPE)</button>
+         <br/>
+         <button onclick="createEmailScan();">生成二维码(EMAIL_TYPE)</button>
+         <br/>
+         <button onclick="createPhoneScan();">生成二维码(PHONE_TYPE)</button>
+         <br/>
+         <button onclick="createSmsScan();">生成二维码(SMS_TYPE)</button>
+    </body>
+</html>
